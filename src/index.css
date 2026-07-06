@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SR Innovations — Premium Digital Growth Agency Design System
+   All colors in HSL. Use semantic tokens only. */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 230 35% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 230 35% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 35% 10%;
+
+    /* Brand — deep indigo / violet */
+    --primary: 249 78% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 258 90% 72%;
+    --primary-deep: 244 70% 38%;
+
+    /* Premium accent — warm gold */
+    --accent: 42 92% 58%;
+    --accent-foreground: 230 35% 10%;
+
+    --secondary: 230 40% 96%;
+    --secondary-foreground: 230 35% 12%;
+
+    --muted: 230 30% 96%;
+    --muted-foreground: 230 12% 42%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 70% 40%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 230 25% 90%;
+    --input: 230 25% 90%;
+    --ring: 249 78% 60%;
+
+    /* Surfaces */
+    --surface: 230 40% 98%;
+    --surface-dark: 234 45% 9%;
+    --surface-darker: 234 50% 6%;
+
+    --radius: 1rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(249 78% 60%) 0%, hsl(268 85% 64%) 50%, hsl(290 80% 62%) 100%);
+    --gradient-hero: radial-gradient(ellipse at top left, hsl(258 90% 72% / 0.18), transparent 55%), radial-gradient(ellipse at bottom right, hsl(290 80% 62% / 0.18), transparent 55%), linear-gradient(180deg, hsl(234 50% 6%) 0%, hsl(234 45% 9%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(234 50% 6%) 0%, hsl(244 45% 11%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.06), hsl(0 0% 100% / 0.02));
+    --gradient-text: linear-gradient(135deg, hsl(249 95% 72%), hsl(290 90% 75%));
+    --gradient-gold: linear-gradient(135deg, hsl(42 92% 58%), hsl(36 95% 50%));
+
+    /* Shadows */
+    --shadow-elegant: 0 24px 60px -20px hsl(249 78% 30% / 0.35);
+    --shadow-soft: 0 10px 30px -12px hsl(230 35% 20% / 0.18);
+    --shadow-glow: 0 0 80px hsl(258 90% 72% / 0.45);
+    --shadow-card: 0 1px 0 hsl(0 0% 100% / 0.06) inset, 0 30px 60px -30px hsl(234 80% 4% / 0.6);
+
+    /* Motion */
+    --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+    --transition-smooth: all 0.35s var(--ease-out-quint);
+  }
+
+  .dark {
+    --background: 234 50% 6%;
+    --foreground: 230 30% 96%;
+    --card: 234 45% 9%;
+    --card-foreground: 230 30% 96%;
+    --popover: 234 45% 9%;
+    --popover-foreground: 230 30% 96%;
+    --primary: 258 90% 72%;
+    --primary-foreground: 234 50% 6%;
+    --secondary: 234 35% 14%;
+    --secondary-foreground: 230 30% 96%;
+    --muted: 234 30% 14%;
+    --muted-foreground: 230 15% 70%;
+    --accent: 42 92% 58%;
+    --accent-foreground: 234 50% 6%;
+    --border: 234 30% 18%;
+    --input: 234 30% 18%;
+    --ring: 258 90% 72%;
+  }
+
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-feature-settings: "ss01", "cv11";
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    @apply tracking-tight;
+    font-feature-settings: "ss01";
+  }
+}
+
+@layer components {
+  .container-tight { @apply mx-auto w-full max-w-6xl px-5 sm:px-8; }
+  .container-wide  { @apply mx-auto w-full max-w-7xl px-5 sm:px-8; }
+
+  .text-gradient {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .glass {
+    background: linear-gradient(145deg, hsl(0 0% 100% / 0.07), hsl(0 0% 100% / 0.02));
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid hsl(0 0% 100% / 0.08);
+  }
+  .glass-light {
+    background: linear-gradient(145deg, hsl(0 0% 100% / 0.85), hsl(0 0% 100% / 0.6));
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid hsl(230 25% 90%);
+  }
+
+  .surface-dark { background: var(--gradient-hero); color: hsl(230 30% 96%); }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium tracking-wide uppercase;
+    border-color: hsl(var(--primary) / 0.25);
+    background: hsl(var(--primary) / 0.08);
+    color: hsl(var(--primary));
+  }
+  .eyebrow-dark {
+    @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-medium tracking-wide uppercase;
+    background: hsl(0 0% 100% / 0.08);
+    border: 1px solid hsl(0 0% 100% / 0.14);
+    color: hsl(0 0% 100%);
+  }
+
+  .btn-shine {
+    position: relative; overflow: hidden;
+  }
+  .btn-shine::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(120deg, transparent 30%, hsl(0 0% 100% / 0.35) 50%, transparent 70%);
+    transform: translateX(-120%);
+    transition: transform 0.8s var(--ease-out-quint);
+  }
+  .btn-shine:hover::after { transform: translateX(120%); }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(hsl(0 0% 100% / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(0 0% 100% / 0.05) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  }
+
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+  .hover-lift:hover { transform: translateY(-4px); box-shadow: var(--shadow-elegant); }
+}
+
+@layer utilities {
+  .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .bg-gradient-primary { background-image: var(--gradient-primary); }
+  .bg-gradient-dark { background-image: var(--gradient-dark); }
+  .bg-gradient-gold { background-image: var(--gradient-gold); }
+}
