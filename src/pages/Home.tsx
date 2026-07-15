@@ -231,7 +231,7 @@ const Home = () => {
       </section>
 
       {/* 4. WHY CHOOSE US (4 cards) */}
-      <section className="py-20 md:py-28 bg-surface">
+      {/* <section className="py-20 md:py-28 bg-surface">
         <div className="container-wide">
           <div className="max-w-3xl mb-14">
             <span className="eyebrow">Why businesses choose us</span>
@@ -253,7 +253,7 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 5. VIDEO TESTIMONIALS */}
       <section className="py-20 md:py-28 surface-dark">
@@ -320,7 +320,7 @@ const Home = () => {
       </section>
 
       {/* 6. ABOUT THE AGENCY */}
-      <section className="py-20 md:py-28">
+      {/* <section className="py-20 md:py-28">
         <div className="container-wide grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-5">
             <span className="eyebrow">About the agency</span>
@@ -368,7 +368,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 7. INDUSTRIES */}
       <section className="py-20 md:py-28 bg-surface">
