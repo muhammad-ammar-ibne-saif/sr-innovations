@@ -177,7 +177,7 @@ export const SiteHeader = () => {
             size="sm"
             className="hidden sm:inline-flex transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98]"
           >
-            <Link to="/contact">Free Growth Audit</Link>
+            <Link to="/growth-audit">Free Growth Audit</Link>
           </Button>
           <button
             className="xl:hidden relative z-[60] inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-background/60 transition-colors hover:bg-muted active:scale-95"

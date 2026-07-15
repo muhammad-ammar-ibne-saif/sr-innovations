@@ -28,7 +28,7 @@ const Industries = () => (
             <div className="size-11 rounded-xl bg-primary/10 text-primary inline-flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition"><Icon name={i.icon} className="size-5" /></div>
             <div className="font-display font-semibold">{i.title}</div>
             <p className="text-sm text-muted-foreground mt-1.5">{i.short}</p>
-            <div className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-primary">View page <Icons.ArrowRight className="size-3.5" /></div>
+            <div className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-primary">View More <Icons.ArrowRight className="size-3.5" /></div>
           </Link>
         ))}
       </div>

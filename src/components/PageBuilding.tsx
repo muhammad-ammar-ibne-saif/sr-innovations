@@ -3,6 +3,8 @@ import * as Icons from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ContactForm } from "@/components/ContactForm";
 import { SITE } from "@/config/site";
+import { FaWhatsapp } from "react-icons/fa";
+import { AuditForm } from "./AuditForm";
 
 const Icon = ({ name, className }: { name: string; className?: string }) => {
   const I = (Icons as any)[name] ?? Icons.Sparkles;
@@ -37,7 +39,7 @@ export const CtaBand = () => (
           </div>
           <div className="md:col-span-4 flex flex-wrap gap-3 md:justify-end">
             <Button asChild variant="gold" size="lg"><Link to="/contact">Start your project</Link></Button>
-            <Button asChild variant="outline-light" size="lg"><a href={SITE.whatsappLink} target="_blank" rel="noopener noreferrer"><Icons.MessageCircle className="size-4" /> WhatsApp</a></Button>
+            <Button asChild variant="outline-light" size="lg"><a href={SITE.whatsappLink} target="_blank" rel="noopener noreferrer"><FaWhatsapp className="size-4" /> WhatsApp</a></Button>
           </div>
         </div>
       </div>
@@ -60,7 +62,7 @@ export const ContactBand = ({ defaultService }: { defaultService?: string }) => 
       </div>
       <div className="lg:col-span-7">
         <div className="rounded-3xl border border-border bg-card p-6 md:p-8 shadow-soft">
-          <ContactForm defaultService={defaultService} />
+          <AuditForm defaultService={defaultService} />
         </div>
       </div>
     </div>

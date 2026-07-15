@@ -100,7 +100,7 @@ const Home = () => {
           Websites that convert, Google Ads that ring the phone, and content people actually stop scrolling for. Run by a small senior team who replies when you message them.
         </p>
         <div className="flex flex-wrap gap-3">
-          <Button asChild variant="hero" size="xl"><Link to="/contact">Get Your Free Growth Audit <Icons.ArrowRight className="size-4" /></Link></Button>
+          <Button asChild variant="hero" size="xl"><Link to="/growth-audit">Get Your Free Growth Audit <Icons.ArrowRight className="size-4" /></Link></Button>
           <Button asChild variant="whatsapp" size="xl"><a href={SITE.whatsappLink} target="_blank" rel="noopener noreferrer"><FaWhatsapp className="size-4" /> Message us on WhatsApp</a></Button>
         </div>
         <div className="flex flex-wrap items-center gap-x-5 gap-y-2 pt-1 text-sm text-white/70">
@@ -153,28 +153,45 @@ const Home = () => {
 </section>
 
       {/* 2. TRUST BAR */}
-      <section className="border-y border-border bg-surface">
-        <div className="container-wide py-6">
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
-            {[
-              { i: "ShieldCheck", t: "UK Registered Company" },
-              { i: "Star", t: `${SITE.google.rating}★ Google Rating`, href: SITE.google.profileUrl },
-              { i: "Users", t: "Senior Specialist Team" },
-              { i: "Clock", t: "Fast Response Time" },
-              { i: "MessageCircle", t: "Direct WhatsApp Support", href: SITE.whatsappLink },
-              { i: "BadgeCheck", t: "Transparent Pricing" },
-            ].map((x) =>
-              x.href ? (
-                <a key={x.t} href={x.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition">
-                  <Icon name={x.i} className="size-4 text-primary" /><span className="font-medium text-foreground/85">{x.t}</span>
-                </a>
-              ) : (
-                <div key={x.t} className="flex items-center gap-2"><Icon name={x.i} className="size-4 text-primary" /><span className="font-medium text-foreground/85">{x.t}</span></div>
-              )
-            )}
+<section className="border-y border-border bg-surface">
+  <div className="container-wide py-6">
+    <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
+      {[
+        { i: "ShieldCheck", t: "UK Registered Company" },
+        { i: "Star", t: `${SITE.google.rating}★ Google Rating`, href: SITE.google.profileUrl },
+        { i: "Users", t: "Senior Specialist Team" },
+        { i: "Clock", t: "Fast Response Time" },
+        { i: "whatsapp", t: "Direct WhatsApp Support", href: SITE.whatsappLink }, // flag instead of lucide name
+        { i: "BadgeCheck", t: "Transparent Pricing" },
+      ].map((x) => {
+        const iconEl =
+          x.i === "whatsapp" ? (
+            <FaWhatsapp className="size-4 text-primary" />
+          ) : (
+            <Icon name={x.i} className="size-4 text-primary" />
+          );
+
+        return x.href ? (
+          <a
+            key={x.t}
+            href={x.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:text-primary transition"
+          >
+            {iconEl}
+            <span className="font-medium text-foreground/85">{x.t}</span>
+          </a>
+        ) : (
+          <div key={x.t} className="flex items-center gap-2">
+            {iconEl}
+            <span className="font-medium text-foreground/85">{x.t}</span>
           </div>
-        </div>
-      </section>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       {/* 3. SERVICES */}
       <section id="services" className="py-20 md:py-28">
@@ -378,7 +395,7 @@ const Home = () => {
                     </ul>
                     {c.link && (
                       <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-primary">
-                        View industry page <Icons.ArrowRight className="size-4" />
+                        Explore More <Icons.ArrowRight className="size-4" />
                       </span>
                     )}
                   </div>
@@ -444,8 +461,8 @@ const Home = () => {
           <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">Ready to bring in <span className="text-gradient">more customers</span> every month?</h2>
           <p className="text-white/75 text-lg max-w-2xl mx-auto">Book a free strategy call. We'll look at your business honestly and tell you exactly what we'd do to bring in more enquiries.</p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <Button asChild variant="hero" size="xl"><Link to="/contact">Book My Free Call</Link></Button>
-            <Button asChild variant="whatsapp" size="xl"><a href={SITE.whatsappLink} target="_blank" rel="noopener noreferrer"><Icons.MessageCircle className="size-4" /> Chat on WhatsApp</a></Button>
+            <Button asChild variant="hero" size="xl"><Link to="/contact">Book A Free Call</Link></Button>
+            <Button asChild variant="whatsapp" size="xl"><a href={SITE.whatsappLink} target="_blank" rel="noopener noreferrer"><FaWhatsapp className="size-5" /> Chat on WhatsApp</a></Button>
           </div>
         </div>
       </section>

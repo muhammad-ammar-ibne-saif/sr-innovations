@@ -4,6 +4,7 @@ import { Seo } from "@/components/Seo";
 import { PageHero, CtaBand, ContactBand } from "@/components/PageBuilding";
 import { Button } from "@/components/ui/button";
 import { SERVICES, SITE } from "@/config/site";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Icon = ({ name, className }: { name: string; className?: string }) => {
   const I = (Icons as any)[name] ?? Icons.Sparkles;
@@ -36,7 +37,7 @@ const Services = () => (
               {s.hasPage
                 ? <Button asChild variant="hero" size="sm"><Link to={`/services/${s.key}`}>Learn more</Link></Button>
                 : <Button asChild variant="outline" size="sm"><Link to="/contact">Enquire</Link></Button>}
-              <a href={SITE.whatsappLink} target="_blank" rel="noopener noreferrer" className="text-xs font-semibold text-primary inline-flex items-center gap-1"><Icons.MessageCircle className="size-3.5" /> WhatsApp</a>
+              <a href={SITE.whatsappLink} target="_blank" rel="noopener noreferrer" className="text-xs font-semibold text-primary inline-flex items-center gap-1"><FaWhatsapp className="size-3.5" /> WhatsApp</a>
             </div>
           </div>
         ))}

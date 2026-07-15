@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, MessageCircle, Instagram, Facebook, Linkedin, Globe2 } from "lucide-react";
 import { LOGO_URL, SITE, INDUSTRY_CATEGORIES } from "@/config/site";
+import { FaWhatsapp } from "react-icons/fa";
 
 const FOOTER_SERVICES = [
   { t: "Website Design", to: "/services/website-design" },
@@ -30,7 +31,7 @@ export const SiteFooter = () => {
                 { i: Instagram, href: "https://instagram.com/thesrinnovations", label: "Instagram" },
                 { i: Facebook, href: "#", label: "Facebook" },
                 { i: Linkedin, href: "#", label: "LinkedIn" },
-                { i: MessageCircle, href: SITE.whatsappLink, label: "WhatsApp" },
+                { i: FaWhatsapp, href: SITE.whatsappLink, label: "WhatsApp" },
               ].map(({ i: I, href, label }) => (
                 <a
                   key={label}
