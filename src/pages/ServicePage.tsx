@@ -57,9 +57,36 @@ const COPY: Record<ServiceKey, { problem: string; what: string[]; why: string[];
       { q: "Will the brand work in print and digital?", a: "Yes. Every brand we build comes with print and digital ready assets and a full guidelines document." },
     ],
   },
-  "graphic-design": { problem: "", what: [], why: [], faq: [] },
-  "ecommerce-websites": { problem: "", what: [], why: [], faq: [] },
-  "mobile-app-development": { problem: "", what: [], why: [], faq: [] },
+  "graphic-design": {
+    problem: "Inconsistent visuals across your website, socials and print materials make even good businesses look unprofessional and hard to trust at a glance.",
+    what: ["Marketing collateral: brochures, flyers, one pagers", "Social media templates and post design", "Packaging and print ready artwork", "Presentation and pitch deck design", "Infographics and data visuals", "Signage and merchandise design"],
+    why: ["Every asset follows one consistent visual system.", "Designed to be reused and adapted without starting from scratch.", "Print and digital ready files handed over, no lock in."],
+    faq: [
+      { q: "Do you design for print and digital both?", a: "Yes. Every project comes with print ready and digital ready file formats." },
+      { q: "Can you work from our existing brand guidelines?", a: "Yes. We'll match your existing brand system, or help tighten it up if it's inconsistent." },
+      { q: "How many revisions are included?", a: "Every design includes revision rounds until you're happy, scoped clearly at the start of the project." },
+    ],
+  },
+  "ecommerce-websites": {
+    problem: "Generic ecommerce templates convert poorly. Slow product pages, clunky checkouts and weak product presentation quietly lose you sales every single day.",
+    what: ["Custom storefront design and build", "Fast, mobile first product and category pages", "Secure checkout and payment integration", "Inventory, shipping and tax setup", "Product photography direction", "Analytics, abandoned cart recovery and upsells"],
+    why: ["Every page is built to move visitors toward checkout.", "Fast load times reduce drop off at every step.", "Built on platforms that scale as your catalogue grows."],
+    faq: [
+      { q: "Which ecommerce platforms do you work with?", a: "We build on Shopify, WooCommerce and custom Next.js storefronts depending on your catalogue size and budget." },
+      { q: "Can you migrate my existing store?", a: "Yes. We handle product, customer and order data migration with minimal downtime." },
+      { q: "Do you set up payment and shipping?", a: "Yes. Payment gateways, tax rules and shipping zones are configured as part of every build." },
+    ],
+  },
+  "mobile-app-development": {
+    problem: "Most service businesses lose customers to competitors with an app because bookings, loyalty and repeat business all happen off platform, on someone else's terms.",
+    what: ["Native iOS and Android app design and build", "Cross platform builds with React Native", "Booking, ordering or loyalty functionality", "Push notifications and customer engagement", "Backend, API and admin dashboard", "App Store and Google Play submission"],
+    why: ["One codebase for iOS and Android keeps costs down.", "Built around the one action that drives revenue.", "Ongoing support after launch, not a handover and disappear."],
+    faq: [
+      { q: "How long does an app take to build?", a: "Most apps take 8 to 14 weeks depending on features, from design through to store submission." },
+      { q: "Do you handle App Store and Play Store submission?", a: "Yes. We manage the full submission and review process for both stores." },
+      { q: "Do you offer ongoing support after launch?", a: "Yes. We offer maintenance plans covering updates, bug fixes and OS compatibility." },
+    ],
+  },
 };
 
 const ServicePage = () => {

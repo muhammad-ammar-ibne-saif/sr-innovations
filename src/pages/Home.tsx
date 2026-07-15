@@ -3,6 +3,7 @@ import * as Icons from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Seo } from "@/components/Seo";
 import { ContactForm } from "@/components/ContactForm";
+import { FaWhatsapp } from "react-icons/fa";
 import {
   SITE,
   SERVICES,
@@ -73,95 +74,83 @@ const Home = () => {
       />
 
       {/* 1. HERO */}
-      <section className="relative surface-dark overflow-hidden">
-        <div className="absolute inset-0 grid-bg opacity-30" />
-        <div className="absolute -top-40 -left-32 size-[420px] rounded-full bg-primary/15 blur-3xl" />
-        <div className="absolute -bottom-40 -right-32 size-[480px] rounded-full bg-primary-glow/10 blur-3xl" />
+<section className="relative surface-dark overflow-hidden">
+  <div className="absolute inset-0 grid-bg opacity-30" />
+  <div className="absolute -top-40 -left-32 size-[420px] rounded-full bg-primary/15 blur-3xl" />
+  <div className="absolute -bottom-40 -right-32 size-[480px] rounded-full bg-primary-glow/10 blur-3xl" />
 
-        <div className="container-wide relative pt-14 pb-20 md:pt-20 md:pb-28 lg:pt-24 lg:pb-32">
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            <div className="lg:col-span-7 space-y-7 animate-fade-in-up">
-              <div className="flex flex-wrap items-center gap-3">
-                <span className="eyebrow-dark"><Icons.ShieldCheck className="size-3.5" /> UK Registered Digital Growth Agency</span>
-                <a
-                  href={SITE.google.profileUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/15 px-3 py-1 text-xs text-white hover:bg-white/15 transition"
-                >
-                  <span className="flex text-accent">
-                    {Array.from({ length: 5 }).map((_, i) => <Icons.Star key={i} className="size-3 fill-current" />)}
-                  </span>
-                  <span className="font-semibold">{SITE.google.rating} on Google</span>
+  <div className="container-wide relative py-10 md:py-14 lg:py-10 min-h-[calc(100vh-5rem)] flex items-center">
+    <div className="grid lg:grid-cols-12 gap-8 lg:gap-14 items-center w-full">
+      <div className="lg:col-span-7 space-y-5 animate-fade-in-up">
+        <a
+          href={SITE.google.profileUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/15 px-3 py-1.5 text-xs text-white hover:bg-white/15 transition w-fit"
+        >
+          <Icons.Star className="size-3.5 text-accent fill-current" />
+          <span className="font-semibold">{SITE.google.rating} rated on Google</span>
+        </a>
+
+        <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] text-white">
+          Most agencies talk strategy.{" "}
+          <span className="text-gradient">We just get you booked out.</span>
+        </h1>
+        <p className="text-base md:text-lg text-white/75 max-w-xl">
+          Websites that convert, Google Ads that ring the phone, and content people actually stop scrolling for. Run by a small senior team who replies when you message them.
+        </p>
+        <div className="flex flex-wrap gap-3">
+          <Button asChild variant="hero" size="xl"><Link to="/contact">Get Your Free Growth Audit <Icons.ArrowRight className="size-4" /></Link></Button>
+          <Button asChild variant="whatsapp" size="xl"><a href={SITE.whatsappLink} target="_blank" rel="noopener noreferrer"><FaWhatsapp className="size-4" /> Message us on WhatsApp</a></Button>
+        </div>
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 pt-1 text-sm text-white/70">
+          <span className="inline-flex items-center gap-2"><Icons.Check className="size-4 text-primary-glow" /> 30 min call, no sales script</span>
+          <span className="inline-flex items-center gap-2"><Icons.Check className="size-4 text-primary-glow" /> Month to month, leave anytime</span>
+        </div>
+      </div>
+
+      <div className="lg:col-span-5 relative">
+        <div className="relative max-w-md mx-auto">
+          <div className="absolute -inset-6 rounded-[2rem] bg-gradient-primary blur-2xl opacity-20" />
+          <div className="relative rounded-[2rem] bg-white shadow-elegant p-6 space-y-4">
+            <div className="flex items-center justify-between gap-3">
+              <div className="min-w-0">
+                <div className="text-xs uppercase tracking-wider font-bold text-muted-foreground">Companies House</div>
+                <div className="font-display font-bold text-base text-foreground leading-snug">{SITE.legalName}</div>
+                <a href={SITE.companiesHouseUrl} target="_blank" rel="noopener noreferrer" className="text-xs text-primary font-semibold hover:underline">
+                  No. {SITE.companyNo}, verify this
                 </a>
               </div>
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] text-white">
-                Helping UK Businesses Win{" "}
-                <span className="text-gradient">More Customers Online.</span>
-              </h1>
-              <p className="text-lg md:text-xl text-white/75 max-w-2xl">
-                We build websites that convert, run Google Ads that bring real calls, grow your search rankings and create social content that builds trust. One team, working to one growth plan for your business.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <Button asChild variant="hero" size="xl"><Link to="/contact">Get Your Free Growth Audit <Icons.ArrowRight className="size-4" /></Link></Button>
-                <Button asChild variant="whatsapp" size="xl"><a href={SITE.whatsappLink} target="_blank" rel="noopener noreferrer"><Icons.MessageCircle className="size-4" /> Chat on WhatsApp</a></Button>
-              </div>
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-3 text-sm text-white/70">
-                <span className="inline-flex items-center gap-2"><Icons.Check className="size-4 text-primary-glow" /> Free 30 minute strategy call</span>
-                <span className="inline-flex items-center gap-2"><Icons.Check className="size-4 text-primary-glow" /> No long term contracts</span>
-                <span className="inline-flex items-center gap-2"><Icons.Check className="size-4 text-primary-glow" /> Reply within 1 hour</span>
+              <div className="size-11 rounded-2xl bg-gradient-primary text-primary-foreground inline-flex items-center justify-center shadow-soft shrink-0">
+                <Icons.ShieldCheck className="size-5" />
               </div>
             </div>
 
-            <div className="lg:col-span-5 relative">
-              <div className="relative max-w-md mx-auto">
-                <div className="absolute -inset-6 rounded-[2rem] bg-gradient-primary blur-2xl opacity-20" />
-                <div className="relative rounded-[2rem] bg-white shadow-elegant p-6 space-y-5">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-xs uppercase tracking-wider font-bold text-muted-foreground">UK Registered Company</div>
-                      <div className="font-display font-bold text-lg">Company No. {SITE.companyNo}</div>
-                    </div>
-                    <div className="size-12 rounded-2xl bg-gradient-primary text-primary-foreground inline-flex items-center justify-center shadow-soft">
-                      <Icons.ShieldCheck className="size-6" />
-                    </div>
-                  </div>
-
-                  <a href={SITE.google.profileUrl} target="_blank" rel="noopener noreferrer" className="block rounded-2xl border border-border bg-surface p-4 hover-lift">
-                    <div className="flex items-center gap-3">
-                      <div className="size-11 rounded-full bg-white border border-border flex items-center justify-center shadow-soft">
-                        <Icons.Star className="size-5 text-accent fill-current" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2">
-                          <span className="font-display font-bold text-xl">{SITE.google.rating}</span>
-                          <span className="flex text-accent">{Array.from({ length: 5 }).map((_, i) => <Icons.Star key={i} className="size-3.5 fill-current" />)}</span>
-                        </div>
-                        <div className="text-xs text-muted-foreground">Verified Google Reviews</div>
-                      </div>
-                      <Icons.ArrowUpRight className="size-4 text-muted-foreground" />
-                    </div>
-                  </a>
-
-                  <div>
-                    <div className="text-[10px] uppercase tracking-wider font-bold text-muted-foreground mb-2">What we do</div>
-                    <div className="grid grid-cols-2 gap-2">
-                      {heroServiceChips.map((s) => (
-                        <Link key={s.t} to={s.to} className="rounded-xl border border-border bg-card px-3 py-2.5 flex items-center gap-2 hover:border-primary/40 hover:bg-primary/5 transition">
-                          <Icon name={s.i} className="size-4 text-primary shrink-0" />
-                          <span className="text-xs font-semibold text-foreground truncate">{s.t}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-
-                  <Button asChild variant="hero" className="w-full"><Link to="/contact">Book My Free Audit</Link></Button>
-                </div>
+            <div>
+              <div className="text-[10px] uppercase tracking-wider font-bold text-muted-foreground mb-2">Where we can start</div>
+              <div className="grid grid-cols-2 gap-2">
+                {heroServiceChips.map((s) => (
+                  <Link key={s.t} to={s.to} className="rounded-xl border border-border bg-card px-3 py-2.5 flex items-center gap-2 hover:border-primary/40 hover:bg-primary/5 transition">
+                    <Icon name={s.i} className="size-4 text-primary shrink-0" />
+                    <span className="text-xs font-semibold text-foreground truncate">{s.t}</span>
+                  </Link>
+                ))}
               </div>
             </div>
+
+            <a href={SITE.whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-xl bg-success/8 border border-success/20 p-3 hover:bg-success/12 transition">
+              <FaWhatsapp className="size-7 text-success shrink-0" />
+              <div className="min-w-0">
+                <div className="text-sm font-semibold text-foreground">Prefer to just message?</div>
+                <div className="text-xs text-muted-foreground truncate">We're usually online, {SITE.whatsappDisplay}</div>
+              </div>
+            </a>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* 2. TRUST BAR */}
       <section className="border-y border-border bg-surface">

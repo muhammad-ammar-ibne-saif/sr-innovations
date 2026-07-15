@@ -14,16 +14,13 @@ export const SiteFooter = () => {
   return (
     <footer className="surface-dark relative overflow-hidden">
       <div className="absolute inset-0 grid-bg opacity-25 pointer-events-none" />
-      <div className="container-wide relative py-16 md:py-20">
+      <div className="container-wide relative py-16 md:pt-12 md:pb-3">
         <div className="grid gap-12 lg:grid-cols-12">
           {/* Col 1 — Brand */}
           <div className="lg:col-span-4 space-y-5">
             <Link to="/" className="flex items-center gap-3">
               <img src={LOGO_URL} alt="SR Innovations" className="h-11 w-11" />
-              <div>
-                <div className="font-display font-bold text-lg text-white">The SR Innovations</div>
-                <div className="text-xs uppercase tracking-wider text-white/60">Digital Growth Agency</div>
-              </div>
+              
             </Link>
             <p className="text-sm text-white/70 max-w-sm">
               A UK based digital growth agency helping service businesses get more enquiries with websites, SEO, Google Ads, social media and branding. Australia office available for our clients down under.
@@ -83,14 +80,14 @@ export const SiteFooter = () => {
               <li className="flex gap-3"><Phone className="size-4 mt-0.5 text-primary-glow" /><a href={SITE.auPhoneHref} className="hover:text-white">AU {SITE.auPhone}</a></li>
               <li className="flex gap-3"><Mail className="size-4 mt-0.5 text-primary-glow" /><a href={`mailto:${SITE.email}`} className="hover:text-white break-all">{SITE.email}</a></li>
               <li className="flex gap-3"><MessageCircle className="size-4 mt-0.5 text-primary-glow" /><a href={SITE.whatsappLink} target="_blank" rel="noopener noreferrer" className="hover:text-white">WhatsApp {SITE.whatsappDisplay}</a></li>
-              <li className="flex gap-3"><MapPin className="size-4 mt-0.5 text-primary-glow" /><span>{SITE.ukAddress}</span></li>
-              <li className="flex gap-3"><MapPin className="size-4 mt-0.5 text-primary-glow" /><span>{SITE.auAddress}</span></li>
+              <li className="flex gap-3"><MapPin className="size-6 mt-0.5 text-primary-glow" /><span>{SITE.ukAddress}</span></li>
+              <li className="flex gap-3"><MapPin className="size-8 mt-0.5 text-primary-glow" /><span>{SITE.auAddress}</span></li>
             </ul>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-14 pt-8 border-t border-white/10">
+        <div className="mt-8 pt-4 border-t border-white/10">
           <div className="grid gap-6 md:grid-cols-12 items-center">
             <div className="md:col-span-7 space-y-1.5">
               <div className="text-sm font-display font-bold text-white tracking-wide uppercase">{SITE.legalName}</div>

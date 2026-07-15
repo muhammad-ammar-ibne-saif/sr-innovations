@@ -72,9 +72,9 @@ export const SERVICES: {
   { key: "seo-services", title: "SEO Services", icon: "Search", short: "Rank higher on Google for the searches your customers use.", bullets: ["Local & national SEO", "Technical fixes", "Content & backlinks", "Monthly reporting"], hasPage: true },
   { key: "google-ads-management", title: "Google Ads Management", icon: "Target", short: "Get phone calls and enquiries within 7 days of launch.", bullets: ["Search & call ads", "Landing pages", "Conversion tracking", "Weekly optimisation"], hasPage: true },
   { key: "branding-design", title: "Branding & Design", icon: "Sparkles", short: "Premium brand identities that command higher prices.", bullets: ["Logo & identity", "Brand guidelines", "Print & digital", "Pitch materials"], hasPage: true },
-  { key: "graphic-design", title: "Graphic Design", icon: "Palette", short: "Polished graphics for ads, social and print.", bullets: ["Social creatives", "Brochures & flyers", "Ad creatives", "Banners & signage"] },
-  { key: "ecommerce-websites", title: "Ecommerce Websites", icon: "ShoppingBag", short: "Stores built to sell, scale and keep customers coming back.", bullets: ["Shopify & WooCommerce", "Payment integrations", "Speed optimised", "Email & SMS flows"] },
-  { key: "mobile-app-development", title: "Mobile App Development", icon: "Smartphone", short: "iOS and Android apps for service and product businesses.", bullets: ["iOS & Android", "Cross platform", "Booking & loyalty", "API integrations"] },
+  { key: "graphic-design", title: "Graphic Design", icon: "Palette", short: "Polished graphics for ads, social and print.", bullets: ["Social creatives", "Brochures & flyers", "Ad creatives", "Banners & signage"],hasPage: true  },
+  { key: "ecommerce-websites", title: "Ecommerce Websites", icon: "ShoppingBag", short: "Stores built to sell, scale and keep customers coming back.", bullets: ["Shopify & WooCommerce", "Payment integrations", "Speed optimised", "Email & SMS flows"],hasPage: true  },
+  { key: "mobile-app-development", title: "Mobile App Development", icon: "Smartphone", short: "iOS and Android apps for service and product businesses.", bullets: ["iOS & Android", "Cross platform", "Booking & loyalty", "API integrations"],hasPage: true  },
 ];
 
 export type IndustryKey =
