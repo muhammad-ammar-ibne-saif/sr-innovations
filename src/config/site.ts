@@ -1,5 +1,5 @@
 // Served from /public so it works in every host (Lovable preview, Vercel, etc.)
-export const LOGO_URL = "/logo.webp";
+export const LOGO_URL = "/Logo.png";
 
 export const SITE = {
   name: "The SR Innovations",
@@ -43,7 +43,7 @@ export const NAV = [
   { label: "Services", to: "/services" },
   { label: "Industries", to: "/industries" },
   { label: "Portfolio", to: "/portfolio" },
-  { label: "Case Studies", to: "/case-studies" },
+  // { label: "Case Studies", to: "/case-studies" },
   { label: "Testimonials", to: "/testimonials" },
   { label: "About", to: "/about" },
   { label: "Contact", to: "/contact" },
@@ -117,9 +117,9 @@ export const INDUSTRY_CATEGORIES: {
 ];
 
 export const VIDEO_TESTIMONIALS = [
-  { url: "https://www.instagram.com/reel/DNknF8cooX4/", name: "Client Story #1", business: "UK Service Business", summary: "Higher quality enquiries and a website that finally reflects the brand." },
-  { url: "https://www.instagram.com/reel/DNStT8no9Hq/", name: "Client Story #2", business: "UK Service Business", summary: "Phones ringing, diary filling — a real difference within weeks of launch." },
-  { url: "https://www.instagram.com/reel/DQrUSy7DAbs/", name: "Client Story #3", business: "UK Service Business", summary: "Genuine partnership and consistent results month after month." },
+  { url: "https://www.instagram.com/reel/DNknF8cooX4/", name: "Client Story #1", business: "UK Service Business", summary: "Higher quality enquiries and a website that finally reflects the brand.", cover: "/cover1.jpeg"},
+  { url: "https://www.instagram.com/reel/DNStT8no9Hq/", name: "Client Story #2", business: "UK Service Business", summary: "Phones ringing, diary filling — a real difference within weeks of launch.",cover: "/cover2.jpeg" },
+  { url: "https://www.instagram.com/reel/DQrUSy7DAbs/", name: "Client Story #3", business: "UK Service Business", summary: "Genuine partnership and consistent results month after month.",cover: "/cover3.jpeg" },
 ];
 
 export const CASE_STUDIES = [

@@ -52,7 +52,7 @@ export const SiteHeader = () => {
           <img
             src={LOGO_URL}
             alt="SR Innovations logo"
-            className="h-9 w-9 md:h-10 md:w-10 object-contain transition-transform duration-300 group-hover:scale-105"
+            className="h-9 w-9 md:h-48 md:w-48 object-contain transition-transform duration-300 group-hover:scale-105"
           />
         </Link>
 

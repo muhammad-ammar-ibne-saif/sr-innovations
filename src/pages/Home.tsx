@@ -273,46 +273,53 @@ const Home = () => {
             </a>
           </div>
           <div className="grid md:grid-cols-3 gap-5">
-            {VIDEO_TESTIMONIALS.map((v, i) => (
-              <a
-                key={i}
-                href={v.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Watch ${v.name} on Instagram`}
-                className="group relative aspect-[4/5] rounded-3xl overflow-hidden shadow-elegant hover:scale-[1.02] transition-transform"
-              >
-                {/* Premium cover image */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${testimonialCovers[i % 3]}`} />
-                <div className="absolute inset-0 grid-bg opacity-25" />
-                <div className="absolute -top-10 -right-10 size-48 rounded-full bg-white/10 blur-3xl" />
-                <div className="absolute -bottom-10 -left-10 size-48 rounded-full bg-primary/30 blur-3xl" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+  {VIDEO_TESTIMONIALS.map((v, i) => (
+    <a
+      key={i}
+      href={v.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Watch ${v.name} on Instagram`}
+      className="group relative aspect-[4/5] rounded-3xl overflow-hidden shadow-elegant hover:scale-[1.02] transition-transform"
+    >
+      {/* TODO: swap for your actual cover image import/path */}
+      <img
+        src={v.cover}
+        alt={`${v.name} — ${v.business}`}
+        className="absolute inset-0 size-full object-cover"
+      />
 
-                <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase bg-white text-foreground rounded-full px-2.5 py-1 shadow-soft">
-                  <Icons.Instagram className="size-3" /> Client Review
-                </div>
-                <div className="absolute top-4 right-4 inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider bg-black/55 backdrop-blur text-white rounded-full px-2.5 py-1 border border-white/20">
-                  <Icons.Video className="size-3" /> Watch Reel
-                </div>
+      {/* Premium cover overlay */}
+      <div className={`absolute inset-0 bg-gradient-to-br ${testimonialCovers[i % 3]} opacity-60`} />
+      <div className="absolute inset-0 grid-bg opacity-25" />
+      <div className="absolute -top-10 -right-10 size-48 rounded-full bg-white/10 blur-3xl" />
+      <div className="absolute -bottom-10 -left-10 size-48 rounded-full bg-primary/30 blur-3xl" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
 
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="size-20 rounded-full bg-white text-primary flex items-center justify-center shadow-elegant group-hover:scale-110 transition">
-                    <Icons.Play className="size-8 ml-1 fill-current" />
-                  </span>
-                </div>
+      <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase bg-white text-foreground rounded-full px-2.5 py-1 shadow-soft">
+        <Icons.Instagram className="size-3" /> Client Review
+      </div>
+      <div className="absolute top-4 right-4 inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider bg-black/55 backdrop-blur text-white rounded-full px-2.5 py-1 border border-white/20">
+        <Icons.Video className="size-3" /> Watch Reel
+      </div>
 
-                <div className="absolute bottom-5 left-5 right-5 text-white">
-                  <div className="flex text-accent mb-2">{Array.from({ length: 5 }).map((_, k) => <Icons.Star key={k} className="size-3.5 fill-current" />)}</div>
-                  <div className="font-display font-bold text-lg leading-tight">"{v.summary}"</div>
-                  <div className="mt-3 pt-3 border-t border-white/20">
-                    <div className="text-sm font-semibold">{v.business}</div>
-                    <div className="text-xs text-white/75">{v.name}</div>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <span className="size-20 rounded-full bg-white text-primary flex items-center justify-center shadow-elegant group-hover:scale-110 transition">
+          <Icons.Play className="size-8 ml-1 fill-current" />
+        </span>
+      </div>
+
+      <div className="absolute bottom-5 left-5 right-5 text-white">
+        <div className="flex text-accent mb-2">{Array.from({ length: 5 }).map((_, k) => <Icons.Star key={k} className="size-3.5 fill-current" />)}</div>
+        <div className="font-display font-bold text-lg leading-tight">"{v.summary}"</div>
+        <div className="mt-3 pt-3 border-t border-white/20">
+          <div className="text-sm font-semibold">{v.business}</div>
+          <div className="text-xs text-white/75">{v.name}</div>
+        </div>
+      </div>
+    </a>
+  ))}
+</div>
           <div className="mt-10 text-center">
             <Button asChild variant="outline-light" size="lg"><Link to="/testimonials">See all testimonials</Link></Button>
           </div>

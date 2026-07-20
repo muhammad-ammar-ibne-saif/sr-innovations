@@ -34,29 +34,36 @@ const Testimonials = () => (
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {VIDEO_TESTIMONIALS.map((v, i) => (
-            <a
-              key={i}
-              href={v.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Watch ${v.name} on Instagram`}
-              className="group relative aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-dark hover:scale-[1.02] transition-transform"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-primary-deep/30 to-transparent" />
-              <div className="absolute inset-0 grid-bg opacity-50" />
-              <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase bg-white/90 text-foreground rounded-full px-2.5 py-1">
-                <Icons.Instagram className="size-3" /> Instagram Reel
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="size-16 rounded-full bg-white text-primary flex items-center justify-center shadow-elegant group-hover:scale-110 transition"><Icons.Play className="size-6 ml-1" /></span>
-              </div>
-              <div className="absolute bottom-5 left-5 right-5 text-white">
-                <div className="font-display font-semibold text-lg">{v.name}</div>
-                <div className="text-xs text-white/70">{v.business}</div>
-                <div className="mt-2 text-xs text-white/85">"{v.summary}"</div>
-              </div>
-            </a>
-          ))}
+  <a
+    key={i}
+    href={v.url}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={`Watch ${v.name} on Instagram`}
+    className="group relative aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-dark hover:scale-[1.02] transition-transform"
+  >
+    {/* TODO: swap for your actual cover image import/path */}
+    <img
+      src={v.cover}
+      alt={`${v.name} — ${v.business}`}
+      className="absolute inset-0 size-full object-cover"
+    />
+    <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-primary-deep/30 to-transparent" />
+    <div className="absolute inset-0 grid-bg opacity-50" />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-black/30" />
+    <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase bg-white/90 text-foreground rounded-full px-2.5 py-1">
+      <Icons.Instagram className="size-3" /> Instagram Reel
+    </div>
+    <div className="absolute inset-0 flex items-center justify-center">
+      <span className="size-16 rounded-full bg-white text-primary flex items-center justify-center shadow-elegant group-hover:scale-110 transition"><Icons.Play className="size-6 ml-1" /></span>
+    </div>
+    <div className="absolute bottom-5 left-5 right-5 text-white">
+      <div className="font-display font-semibold text-lg">{v.name}</div>
+      <div className="text-xs text-white/70">{v.business}</div>
+      <div className="mt-2 text-xs text-white/85">"{v.summary}"</div>
+    </div>
+  </a>
+))}
         </div>
       </div>
     </section>
