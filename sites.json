@@ -1,0 +1,36 @@
+[
+  { "slug": "welkin-accounting", "name": "Welkin Accounting", "url": "https://welkinaccounting.ca/", "platform": "WordPress" },
+  { "slug": "cruz-sports-coaching", "name": "Cruz Sports Coaching", "url": "https://cruzsportscoaching.co.uk/", "platform": "WordPress" },
+  { "slug": "ultratherm-services", "name": "Ultratherm Services", "url": "https://ultrathermservices.co.uk/", "platform": "WordPress" },
+  { "slug": "simply-hot-stones", "name": "Simply Hot Stones", "url": "https://simplyhotstones.com/", "platform": "WordPress" },
+  { "slug": "social-spawn", "name": "Social Spawn", "url": "https://socialspawn.com/", "platform": "WordPress" },
+  { "slug": "trade-genius", "name": "Trade Genius", "url": "https://www.tradegenius.bot/", "platform": "WordPress" },
+  { "slug": "tommy-hanley", "name": "Tommy Hanley", "url": "https://tommyhanley.com/", "platform": "WordPress" },
+  { "slug": "blackburn-united-fc", "name": "Blackburn United FC", "url": "https://blackburnunitedfc.co.uk/", "platform": "WordPress" },
+  { "slug": "whitetime-property-group", "name": "Whitetime Property Group", "url": "https://whitetimepropertygroup.co.uk/", "platform": "WordPress" },
+  { "slug": "og-construction", "name": "OG Construction", "url": "https://ogconstruction.co.uk/", "platform": "WordPress" },
+  { "slug": "awan-associates-construction", "name": "Awan Associates & Construction", "url": "https://awanassociatesandconstruction.com/", "platform": "WordPress" },
+  { "slug": "mobile-tyrefitting", "name": "Mobile Tyre Fitting", "url": "https://mobile-tyrefitting.co.uk/", "platform": "WordPress" },
+  { "slug": "yor-dan-gas", "name": "Yor-Dan Gas", "url": "https://yor-dangas.co.uk/", "platform": "WordPress" },
+  { "slug": "phentom-logistics", "name": "Phentom Logistics", "url": "https://phentomlogistics.com/", "platform": "WordPress" },
+  { "slug": "tasters-peri-peri-grill", "name": "Tasters Peri Peri Grill", "url": "https://tastersperiperigrill.co.uk/", "platform": "WordPress" },
+
+  { "slug": "blueberry-dental", "name": "Blueberry Dental", "url": "https://www.blueberrydental.co.uk/", "platform": "Wix" },
+  { "slug": "big-ink-bash", "name": "Big Ink Bash", "url": "https://www.biginkbash.com/", "platform": "Wix" },
+  { "slug": "daredevil-books", "name": "Daredevil Books", "url": "https://www.daredevilbooks.co.uk/", "platform": "Wix" },
+  { "slug": "cj-rose-plumbing", "name": "CJ Rose Plumbing", "url": "https://www.cjroseplumbing.com/", "platform": "Wix" },
+
+  { "slug": "inventory-management-system", "name": "Inventory Management System", "url": "https://inventory-management-system-rouge-five.vercel.app/", "platform": "Custom Code", "requiresAuth": true },
+  { "slug": "ad-solution", "name": "Ad Solution", "url": "https://ad-solution.co.uk/", "platform": "Custom Code" },
+  { "slug": "cambria-energy", "name": "Cambria Energy", "url": "https://cambriaenergy.co.uk/", "platform": "Custom Code" },
+  { "slug": "waqar-e-madina", "name": "Waqar-e-Madina", "url": "https://waqar-e-madina.vercel.app/", "platform": "Custom Code" },
+  { "slug": "aymarix", "name": "Aymarix", "url": "https://aymarix.vercel.app/", "platform": "Custom Code" },
+  { "slug": "marching-bell-schools", "name": "Marching Bell Schools", "url": "https://marching-bell-schoolss.vercel.app/login", "platform": "Custom Code", "requiresAuth": true },
+  { "slug": "corpodit", "name": "Corpodit", "url": "https://corpodit-orpin.vercel.app/", "platform": "Custom Code" },
+  { "slug": "efe-retrofit-services", "name": "EFE Retrofit Services", "url": "https://efretrofitservices.com/", "platform": "Custom Code" },
+  { "slug": "aklikx", "name": "Aklikx", "url": "https://aklikx.ca/", "platform": "Custom Code" },
+
+  { "slug": "emergency-plumbing-ltd", "name": "Emergency Plumbing Ltd", "url": "https://www.emergencyplumbingltd.co.uk/", "platform": "Custom Code" },
+  { "slug": "marchbloom-law", "name": "Marchbloom Law", "url": "https://marchbloomlaw.com/", "platform": "Custom Code" },
+  { "slug": "techonskills", "name": "TechOnSkills", "url": "https://techonskills.com/", "platform": "Custom Code" }
+]

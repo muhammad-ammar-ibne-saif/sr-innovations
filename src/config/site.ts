@@ -172,3 +172,91 @@ export const CASE_STUDIES = [
     color: "from-rose-400 to-pink-600",
   },
 ];
+
+export type PortfolioSite = {
+  slug: string;
+  name: string;
+  industry: string;
+  url: string;
+  cat: "Websites" | "Social Media" | "SEO" | "Google Ads" | "Branding";
+  services: string[];
+  color: string;
+  screenshot: string;
+};
+
+const colorCycle = [
+  "from-sky-500 to-blue-600",
+  "from-indigo-600 to-violet-700",
+  "from-zinc-700 to-zinc-900",
+  "from-rose-400 to-pink-600",
+  "from-amber-500 to-orange-500",
+  "from-fuchsia-500 to-pink-500",
+  "from-emerald-500 to-teal-600",
+  "from-cyan-500 to-blue-500",
+];
+
+const rawPortfolioSites: Omit<PortfolioSite, "color" | "screenshot"> & { slug: string }[] extends never ? never : any[] = [
+  // WordPress
+  { slug: "welkin-accounting", name: "Welkin Accounting", industry: "Accounting — Canada", url: "https://welkinaccounting.ca/", cat: "Websites", services: ["Website Design"] },
+  { slug: "cruz-sports-coaching", name: "Cruz Sports Coaching", industry: "Sports Coaching — UK", url: "https://cruzsportscoaching.co.uk/", cat: "Websites", services: ["Website Design"] },
+  { slug: "ultratherm-services", name: "Ultratherm Services", industry: "Heating Services — UK", url: "https://ultrathermservices.co.uk/", cat: "Websites", services: ["Website Design"] },
+  { slug: "simply-hot-stones", name: "Simply Hot Stones", industry: "Wellness / Spa", url: "https://simplyhotstones.com/", cat: "Websites", services: ["Website Design"] },
+  { slug: "social-spawn", name: "Social Spawn", industry: "Marketing Agency", url: "https://socialspawn.com/", cat: "Websites", services: ["Website Design"] },
+  { slug: "trade-genius", name: "Trade Genius", industry: "Trading Tech", url: "https://www.tradegenius.bot/", cat: "Websites", services: ["Website Design"] },
+  { slug: "tommy-hanley", name: "Tommy Hanley", industry: "Personal Brand", url: "https://tommyhanley.com/", cat: "Websites", services: ["Website Design"] },
+  { slug: "blackburn-united-fc", name: "Blackburn United FC", industry: "Sports Club — UK", url: "https://blackburnunitedfc.co.uk/", cat: "Websites", services: ["Website Design"] },
+  { slug: "whitetime-property-group", name: "Whitetime Property Group", industry: "Real Estate — UK", url: "https://whitetimepropertygroup.co.uk/", cat: "Websites", services: ["Website Design"] },
+  { slug: "og-construction", name: "OG Construction", industry: "Construction — UK", url: "https://ogconstruction.co.uk/", cat: "Websites", services: ["Website Design"] },
+  { slug: "awan-associates-construction", name: "Awan Associates & Construction", industry: "Construction", url: "https://awanassociatesandconstruction.com/", cat: "Websites", services: ["Website Design"] },
+  { slug: "mobile-tyrefitting", name: "Mobile Tyre Fitting", industry: "Automotive — UK", url: "https://mobile-tyrefitting.co.uk/", cat: "Websites", services: ["Website Design"] },
+  { slug: "yor-dan-gas", name: "Yor-Dan Gas", industry: "Gas Services — UK", url: "https://yor-dangas.co.uk/", cat: "Websites", services: ["Website Design"] },
+  { slug: "phentom-logistics", name: "Phentom Logistics", industry: "Logistics", url: "https://phentomlogistics.com/", cat: "Websites", services: ["Website Design"] },
+  { slug: "tasters-peri-peri-grill", name: "Tasters Peri Peri Grill", industry: "Restaurant — UK", url: "https://tastersperiperigrill.co.uk/", cat: "Websites", services: ["Website Design"] },
+
+  // Wix
+  { slug: "blueberry-dental", name: "Blueberry Dental", industry: "Dental Clinic — UK", url: "https://www.blueberrydental.co.uk/", cat: "Websites", services: ["Website Design"] },
+  { slug: "big-ink-bash", name: "Big Ink Bash", industry: "Tattoo Studio", url: "https://www.biginkbash.com/", cat: "Websites", services: ["Website Design"] },
+  { slug: "daredevil-books", name: "Daredevil Books", industry: "Bookstore — UK", url: "https://www.daredevilbooks.co.uk/", cat: "Websites", services: ["Website Design"] },
+  { slug: "cj-rose-plumbing", name: "CJ Rose Plumbing", industry: "Plumbing", url: "https://www.cjroseplumbing.com/", cat: "Websites", services: ["Website Design"] },
+
+  // Custom Code
+  { slug: "inventory-management-system", name: "Inventory Management System", industry: "Custom SaaS", url: "https://inventory-management-system-rouge-five.vercel.app/", cat: "Websites", services: ["Custom App"] },
+  { slug: "ad-solution", name: "Ad Solution", industry: "Advertising — UK", url: "https://ad-solution.co.uk/", cat: "Websites", services: ["Website Design"] },
+  { slug: "cambria-energy", name: "Cambria Energy", industry: "Energy — UK", url: "https://cambriaenergy.co.uk/", cat: "Websites", services: ["Website Design"] },
+  { slug: "waqar-e-madina", name: "Waqar-e-Madina", industry: "Religious / Community", url: "https://waqar-e-madina.vercel.app/", cat: "Websites", services: ["Website Design"] },
+  { slug: "aymarix", name: "Aymarix", industry: "Tech / SaaS", url: "https://aymarix.vercel.app/", cat: "Websites", services: ["Website Design"] },
+  { slug: "marching-bell-schools", name: "Marching Bell Schools", industry: "Education — LMS", url: "https://marching-bell-schoolss.vercel.app/login", cat: "Websites", services: ["Custom App"] },
+  { slug: "corpodit", name: "Corpodit", industry: "Corporate / SaaS", url: "https://corpodit-orpin.vercel.app/", cat: "Websites", services: ["Website Design"] },
+  { slug: "efe-retrofit-services", name: "EFE Retrofit Services", industry: "Home Retrofit — UK", url: "https://efretrofitservices.com/", cat: "Websites", services: ["Website Design"] },
+  { slug: "aklikx", name: "Aklikx", industry: "Tech / Agency", url: "https://aklikx.ca/", cat: "Websites", services: ["Website Design"] },
+
+  // Most recent flagship
+  { slug: "emergency-plumbing-ltd", name: "Emergency Plumbing Ltd", industry: "Emergency Plumbing — London", url: "https://www.emergencyplumbingltd.co.uk/", cat: "Websites", services: ["Website Design", "Google Ads", "SEO"] },
+  { slug: "marchbloom-law", name: "Marchbloom Law", industry: "Law Firm", url: "https://marchbloomlaw.com/", cat: "Websites", services: ["Website Design", "SEO"] },
+  { slug: "techonskills", name: "TechOnSkills", industry: "Education — LMS Platform", url: "https://techonskills.com/", cat: "Websites", services: ["Custom App", "Website Design"] },
+];
+
+export const PORTFOLIO_SITES: PortfolioSite[] = rawPortfolioSites.map((s, i) => ({
+  ...s,
+  color: colorCycle[i % colorCycle.length],
+  screenshot: `/portfolio/web/${s.slug}.jpg`,
+}));
+
+
+// ---- Add this below PORTFOLIO_SITES in site.ts ----
+
+const rawSocialSites = [
+  { slug: "social-client-1", name: "Social Client 1", industry: "Add industry", url: "fhjfn", services: ["Social Media"] },
+  { slug: "social-client-2", name: "Social Client 2", industry: "Add industry", url: "", services: ["Social Media"] },
+  { slug: "social-client-3", name: "Social Client 3", industry: "Add industry", url: "", services: ["Social Media"] },
+  { slug: "social-client-4", name: "Social Client 4", industry: "Add industry", url: "", services: ["Social Media"] },
+  { slug: "social-client-5", name: "Social Client 5", industry: "Add industry", url: "", services: ["Social Media"] },
+  { slug: "social-client-6", name: "Social Client 6", industry: "Add industry", url: "", services: ["Social Media"] },
+];
+
+export const SOCIAL_MEDIA_SITES: PortfolioSite[] = rawSocialSites.map((s, i) => ({
+  ...s,
+  cat: "Social Media",
+  color: colorCycle[i % colorCycle.length],
+  screenshot: `/portfolio/social/${s.slug}.jpg`,
+}));

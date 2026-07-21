@@ -82,34 +82,6 @@ const About = () => (
       </div>
     </section>
 
-    {/* Story */}
-    <section className="py-20 md:py-24">
-      <div className="container-wide grid lg:grid-cols-12 gap-12 items-center">
-        <div className="lg:col-span-7 space-y-5">
-          <span className="eyebrow">Our story</span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight">A growth-focused agency for <span className="text-gradient">UK service businesses.</span></h2>
-          <p className="text-muted-foreground text-lg">The SR Innovations was built to help service businesses turn their digital presence into a predictable lead machine — websites that convert, ads that bring calls, and content that builds trust.</p>
-          <p className="text-muted-foreground">As a UK registered company with a team that also serves clients in Australia, we operate with the standards and accountability you'd expect from an established agency.</p>
-          <div className="grid sm:grid-cols-3 gap-4 pt-2">
-            {[{i:"ShieldCheck",t:`Company No. ${SITE.companyNo}`},{i:"Globe2",t:"UK + AU offices"},{i:"Users",t:"100+ clients served"}].map((x) => (
-              <a key={x.t} href={SITE.companiesHouseUrl} target="_blank" rel="noopener noreferrer" className="rounded-xl border border-border bg-card p-4 flex items-center gap-3 hover-lift">
-                <span className="text-primary"><Icon name={x.i} className="size-5" /></span><span className="text-sm font-semibold">{x.t}</span>
-              </a>
-            ))}
-          </div>
-        </div>
-        <div className="lg:col-span-5">
-          <div className="relative aspect-video rounded-3xl overflow-hidden shadow-elegant bg-gradient-dark grid-bg">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <button className="group" aria-label="Play about us video">
-                <span className="size-20 rounded-full bg-white text-primary flex items-center justify-center shadow-elegant group-hover:scale-105 transition"><Icons.Play className="size-7 ml-1" /></span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <CtaBand />
     <ContactBand />
   </>
