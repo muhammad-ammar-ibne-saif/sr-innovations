@@ -285,7 +285,7 @@ const Home = () => {
       {/* TODO: swap for your actual cover image import/path */}
       <img
         src={v.cover}
-        alt={`${v.name} — ${v.business}`}
+        alt={`${v.name} , ${v.business}`}
         className="absolute inset-0 size-full object-cover"
       />
 

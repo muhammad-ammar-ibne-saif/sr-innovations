@@ -15,7 +15,7 @@ const whatYouGet = [
 const Audit = () => (
   <>
     <Seo
-      title="Free Growth Audit — The SR Innovations | UK Digital Growth Agency"
+      title="Free Growth Audit , The SR Innovations | UK Digital Growth Agency"
       description="Get a free, honest audit of your website, SEO and ads. No sales script, just practical advice on how to bring in more enquiries."
       path="/audit"
       schema={{
@@ -52,7 +52,7 @@ const Audit = () => (
             <FaWhatsapp className="size-5 text-success mt-0.5" />
             <div>
               <div className="font-semibold">Prefer WhatsApp?</div>
-              <div className="text-sm text-muted-foreground">Message us directly — usually replies within minutes.</div>
+              <div className="text-sm text-muted-foreground">Message us directly , usually replies within minutes.</div>
             </div>
           </a>
         </div>

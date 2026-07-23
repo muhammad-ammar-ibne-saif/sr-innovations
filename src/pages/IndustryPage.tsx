@@ -24,7 +24,7 @@ const IndustryPage = () => {
   return (
     <>
       <Seo
-        title={`${i.page} — The SR Innovations`}
+        title={`${i.page} , The SR Innovations`}
         description={`${i.short} UK registered digital growth agency for ${i.title.toLowerCase()}.`}
         path={`/industries/${i.key}`}
       />

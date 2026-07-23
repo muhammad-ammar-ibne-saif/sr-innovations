@@ -60,7 +60,7 @@ export const AuditForm = ({ defaultService, compact }: Props) => {
       return;
     }
     setSubmitting(true);
-    const subject = encodeURIComponent(`Growth audit request — ${values.service}`);
+    const subject = encodeURIComponent(`Growth audit request , ${values.service}`);
     const body = encodeURIComponent(
       `Name: ${values.name}\nEmail: ${values.email}\nPhone: ${values.phone}\nService: ${values.service}\nWebsite: ${values.website || "N/A"}\nBudget: ${values.budget}\nBiggest challenge: ${values.challenge}\n\n${values.message}`
     );
@@ -76,7 +76,7 @@ export const AuditForm = ({ defaultService, compact }: Props) => {
     return (
       <div className="rounded-2xl border border-success/30 bg-success/5 p-6 text-center">
         <CheckCircle2 className="size-10 text-success mx-auto mb-3" />
-        <h3 className="font-display font-semibold text-lg">Thanks — we're preparing your audit.</h3>
+        <h3 className="font-display font-semibold text-lg">Thanks , we're preparing your audit.</h3>
         <p className="text-sm text-muted-foreground mt-1">If your email app didn't open, email us at <a className="underline" href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
       </div>
     );

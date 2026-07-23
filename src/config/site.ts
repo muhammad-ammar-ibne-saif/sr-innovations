@@ -29,11 +29,11 @@ export const FOUNDER = {
   name: "Saqib Rasheed",
   title: "Founder & CEO",
   age: 19,
-  bio: "Saqib founded The SR Innovations to give ambitious UK service businesses the same growth machine that big brands quietly rely on — premium websites, sharp Google Ads, and content that actually brings customers.",
+  bio: "Saqib founded The SR Innovations to give ambitious UK service businesses the same growth machine that big brands quietly rely on , premium websites, sharp Google Ads, and content that actually brings customers.",
   pillars: [
     { i: "Eye", t: "Vision", d: "Build an agency UK service businesses genuinely trust to grow their revenue." },
     { i: "Zap", t: "Drive", d: "Move fast, ship premium work, and treat every client's pipeline like our own." },
-    { i: "Users", t: "Leadership", d: "A senior team across design, SEO, ads and social — all behind one accountable point of contact." },
+    { i: "Users", t: "Leadership", d: "A senior team across design, SEO, ads and social , all behind one accountable point of contact." },
     { i: "TrendingUp", t: "Results", d: "Every campaign is judged on one thing: the leads and revenue it puts in your business." },
   ],
 };
@@ -92,12 +92,12 @@ export const INDUSTRIES: {
 }[] = [
   { key: "plumbers", title: "Plumbers", page: "Marketing For Plumbers", icon: "Wrench", short: "Phone calls on tap from local emergency searches.", problems: ["Inconsistent emergency calls", "Beaten by directory sites", "Quotes go cold"], recommended: ["website-design", "google-ads-management", "seo-services"] },
   { key: "cleaning", title: "Cleaning Companies", page: "Marketing For Cleaning Companies", icon: "Sparkle", short: "Recurring contracts from domestic and commercial searches.", problems: ["Low repeat bookings", "No local visibility", "Weak brand trust"], recommended: ["website-design", "seo-services", "social-media-marketing"] },
-  { key: "automotive", title: "Automotive Businesses", page: "Marketing For Automotive Businesses", icon: "Car", short: "Workshops, detailers and dealers — booked out weeks ahead.", problems: ["Low quality leads", "Seasonal dips", "Poor brand image"], recommended: ["google-ads-management", "social-media-marketing", "branding-design"] },
+  { key: "automotive", title: "Automotive Businesses", page: "Marketing For Automotive Businesses", icon: "Car", short: "Workshops, detailers and dealers , booked out weeks ahead.", problems: ["Low quality leads", "Seasonal dips", "Poor brand image"], recommended: ["google-ads-management", "social-media-marketing", "branding-design"] },
   { key: "coaches", title: "Coaches", page: "Marketing For Coaches", icon: "Trophy", short: "Premium positioning that fills your calendar with ideal clients.", problems: ["Inconsistent client flow", "Underpriced offers", "Weak personal brand"], recommended: ["branding-design", "social-media-marketing", "website-design"] },
   { key: "law-firms", title: "Law Firms", page: "Marketing For Law Firms", icon: "Scale", short: "Authority websites and SEO that attract high value cases.", problems: ["Low quality enquiries", "Outdated website", "Hard to stand out"], recommended: ["website-design", "seo-services", "google-ads-management"] },
   { key: "medical-clinics", title: "Medical Clinics", page: "Marketing For Medical Clinics", icon: "Stethoscope", short: "Compliant patient acquisition that grows bookings predictably.", problems: ["Empty slots", "Weak online reputation", "No clear funnel"], recommended: ["website-design", "google-ads-management", "seo-services"] },
   { key: "massage", title: "Massage Businesses", page: "Marketing For Massage Businesses", icon: "Heart", short: "Beautiful booking websites that fill the diary.", problems: ["Quiet mid week days", "Walk in dependence", "No retention plan"], recommended: ["website-design", "social-media-marketing", "branding-design"] },
-  { key: "home-services", title: "Home Service Businesses", page: "Marketing For Home Service Businesses", icon: "Home", short: "Roofers, electricians, gardeners — all booked out from local search.", problems: ["Lead quality varies", "Reliant on word of mouth", "No marketing system"], recommended: ["google-ads-management", "seo-services", "website-design"] },
+  { key: "home-services", title: "Home Service Businesses", page: "Marketing For Home Service Businesses", icon: "Home", short: "Roofers, electricians, gardeners , all booked out from local search.", problems: ["Lead quality varies", "Reliant on word of mouth", "No marketing system"], recommended: ["google-ads-management", "seo-services", "website-design"] },
 ];
 
 export const INDUSTRY_CATEGORIES: {
@@ -118,7 +118,7 @@ export const INDUSTRY_CATEGORIES: {
 
 export const VIDEO_TESTIMONIALS = [
   { url: "https://www.instagram.com/reel/DNknF8cooX4/", name: "Client Story #1", business: "UK Service Business", summary: "Higher quality enquiries and a website that finally reflects the brand.", cover: "/cover1.jpeg"},
-  { url: "https://www.instagram.com/reel/DNStT8no9Hq/", name: "Client Story #2", business: "UK Service Business", summary: "Phones ringing, diary filling — a real difference within weeks of launch.",cover: "/cover2.jpeg" },
+  { url: "https://www.instagram.com/reel/DNStT8no9Hq/", name: "Client Story #2", business: "UK Service Business", summary: "Phones ringing, diary filling , a real difference within weeks of launch.",cover: "/cover2.jpeg" },
   { url: "https://www.instagram.com/reel/DQrUSy7DAbs/", name: "Client Story #3", business: "UK Service Business", summary: "Genuine partnership and consistent results month after month.",cover: "/cover3.jpeg" },
 ];
 
@@ -126,7 +126,7 @@ export const CASE_STUDIES = [
   {
     slug: "emergency-plumbing-ltd",
     name: "Emergency Plumbing Ltd",
-    industry: "Emergency Plumbing — London",
+    industry: "Emergency Plumbing , London",
     url: "https://emergencyplumbingltd.co.uk/",
     services: ["Website Design", "Google Ads", "SEO"],
     overview: "An established emergency plumbing company serving London and the surrounding boroughs, available 24/7 for domestic and commercial call-outs.",
@@ -138,7 +138,7 @@ export const CASE_STUDIES = [
   {
     slug: "imperium-chambers",
     name: "Imperium Chambers",
-    industry: "Barristers' Chambers — London",
+    industry: "Barristers' Chambers , London",
     url: "https://www.imperiumchambers.co.uk/",
     services: ["Website Design", "SEO", "Branding"],
     overview: "A specialist London barristers' chambers handling immigration, public and human rights law for clients across the UK and internationally.",
@@ -150,7 +150,7 @@ export const CASE_STUDIES = [
   {
     slug: "voodoo-motorworks",
     name: "Voodoo Motorworks",
-    industry: "Performance Automotive — UK",
+    industry: "Performance Automotive , UK",
     url: "https://www.voodoomotorworks.co.uk/",
     services: ["Website Design", "Social Media", "Branding"],
     overview: "A UK performance automotive workshop specialising in tuning, servicing and bespoke builds for enthusiasts and high-end clientele.",
@@ -162,7 +162,7 @@ export const CASE_STUDIES = [
   {
     slug: "cordelias-clinic",
     name: "Cordelia's Clinic",
-    industry: "Aesthetic Clinic — UK",
+    industry: "Aesthetic Clinic , UK",
     url: "https://www.cordeliasclinic.co.uk/",
     services: ["Website Design", "SEO", "Social Media"],
     overview: "A UK aesthetic clinic offering advanced skincare and aesthetic treatments delivered by qualified practitioners in a premium clinic setting.",
@@ -196,44 +196,34 @@ const colorCycle = [
 ];
 
 const rawPortfolioSites: Omit<PortfolioSite, "color" | "screenshot"> & { slug: string }[] extends never ? never : any[] = [
+  // Most recent flagship
+   { slug: "emergency-plumbing-ltd", name: "Emergency Plumbing Ltd", industry: "Emergency Plumbing , London", url: "https://www.emergencyplumbingltd.co.uk/", cat: "Websites", services: ["Website Design", "Google Ads", "SEO"] },
+  { slug: "marchbloom-law", name: "Marchbloom Law", industry: "Law Firm", url: "https://marchbloomlaw.com/", cat: "Websites", services: ["Website Design", "SEO"] },
+  { slug: "techonskills", name: "TechOnSkills", industry: "Education , LMS Platform", url: "https://techonskills.com/", cat: "Websites", services: ["Custom App", "Website Design"] },
+   { slug: "ultratherm-services", name: "Ultratherm Services", industry: "Heating Services , UK", url: "https://ultrathermservices.co.uk/", cat: "Websites", services: ["Website Design"] },
   // WordPress
-  { slug: "welkin-accounting", name: "Welkin Accounting", industry: "Accounting — Canada", url: "https://welkinaccounting.ca/", cat: "Websites", services: ["Website Design"] },
-  { slug: "cruz-sports-coaching", name: "Cruz Sports Coaching", industry: "Sports Coaching — UK", url: "https://cruzsportscoaching.co.uk/", cat: "Websites", services: ["Website Design"] },
-  { slug: "ultratherm-services", name: "Ultratherm Services", industry: "Heating Services — UK", url: "https://ultrathermservices.co.uk/", cat: "Websites", services: ["Website Design"] },
-  { slug: "simply-hot-stones", name: "Simply Hot Stones", industry: "Wellness / Spa", url: "https://simplyhotstones.com/", cat: "Websites", services: ["Website Design"] },
-  { slug: "social-spawn", name: "Social Spawn", industry: "Marketing Agency", url: "https://socialspawn.com/", cat: "Websites", services: ["Website Design"] },
-  { slug: "trade-genius", name: "Trade Genius", industry: "Trading Tech", url: "https://www.tradegenius.bot/", cat: "Websites", services: ["Website Design"] },
-  { slug: "tommy-hanley", name: "Tommy Hanley", industry: "Personal Brand", url: "https://tommyhanley.com/", cat: "Websites", services: ["Website Design"] },
-  { slug: "blackburn-united-fc", name: "Blackburn United FC", industry: "Sports Club — UK", url: "https://blackburnunitedfc.co.uk/", cat: "Websites", services: ["Website Design"] },
-  { slug: "whitetime-property-group", name: "Whitetime Property Group", industry: "Real Estate — UK", url: "https://whitetimepropertygroup.co.uk/", cat: "Websites", services: ["Website Design"] },
-  { slug: "og-construction", name: "OG Construction", industry: "Construction — UK", url: "https://ogconstruction.co.uk/", cat: "Websites", services: ["Website Design"] },
-  { slug: "awan-associates-construction", name: "Awan Associates & Construction", industry: "Construction", url: "https://awanassociatesandconstruction.com/", cat: "Websites", services: ["Website Design"] },
-  { slug: "mobile-tyrefitting", name: "Mobile Tyre Fitting", industry: "Automotive — UK", url: "https://mobile-tyrefitting.co.uk/", cat: "Websites", services: ["Website Design"] },
-  { slug: "yor-dan-gas", name: "Yor-Dan Gas", industry: "Gas Services — UK", url: "https://yor-dangas.co.uk/", cat: "Websites", services: ["Website Design"] },
-  { slug: "phentom-logistics", name: "Phentom Logistics", industry: "Logistics", url: "https://phentomlogistics.com/", cat: "Websites", services: ["Website Design"] },
-  { slug: "tasters-peri-peri-grill", name: "Tasters Peri Peri Grill", industry: "Restaurant — UK", url: "https://tastersperiperigrill.co.uk/", cat: "Websites", services: ["Website Design"] },
-
-  // Wix
-  { slug: "blueberry-dental", name: "Blueberry Dental", industry: "Dental Clinic — UK", url: "https://www.blueberrydental.co.uk/", cat: "Websites", services: ["Website Design"] },
+  { slug: "yor-dan-gas", name: "Yor-Dan Gas", industry: "Gas Services , UK", url: "https://yor-dangas.co.uk/", cat: "Websites", services: ["Website Design"] },
+  // Wix 
+{ slug: "blueberry-dental", name: "Blueberry Dental", industry: "Dental Clinic , UK", url: "https://www.blueberrydental.co.uk/", cat: "Websites", services: ["Website Design"] },
   { slug: "big-ink-bash", name: "Big Ink Bash", industry: "Tattoo Studio", url: "https://www.biginkbash.com/", cat: "Websites", services: ["Website Design"] },
-  { slug: "daredevil-books", name: "Daredevil Books", industry: "Bookstore — UK", url: "https://www.daredevilbooks.co.uk/", cat: "Websites", services: ["Website Design"] },
+  { slug: "simply-hot-stones", name: "Simply Hot Stones", industry: "Wellness / Spa", url: "https://simplyhotstones.com/", cat: "Websites", services: ["Website Design"] },
+  { slug: "whitetime-property-group", name: "Whitetime Property Group", industry: "Real Estate , UK", url: "https://whitetimepropertygroup.co.uk/", cat: "Websites", services: ["Website Design"] },
+  { slug: "waqar-e-madina", name: "Waqar-e-Madina", industry: "Religious / Community", url: "https://waqar-e-madina.vercel.app/", cat: "Websites", services: ["Website Design"] },
+  { slug: "aymarix", name: "Aymarix", industry: "Tech / SaaS", url: "https://aymarix.vercel.app/", cat: "Websites", services: ["Website Design"] },
+  { slug: "aklikx", name: "Aklikx", industry: "Tech / Agency", url: "https://aklikx.ca/", cat: "Websites", services: ["Website Design"] },
+  { slug: "welkin-accounting", name: "Welkin Accounting", industry: "Accounting , Canada", url: "https://welkinaccounting.ca/", cat: "Websites", services: ["Website Design"] },
+
   { slug: "cj-rose-plumbing", name: "CJ Rose Plumbing", industry: "Plumbing", url: "https://www.cjroseplumbing.com/", cat: "Websites", services: ["Website Design"] },
 
   // Custom Code
   { slug: "inventory-management-system", name: "Inventory Management System", industry: "Custom SaaS", url: "https://inventory-management-system-rouge-five.vercel.app/", cat: "Websites", services: ["Custom App"] },
-  { slug: "ad-solution", name: "Ad Solution", industry: "Advertising — UK", url: "https://ad-solution.co.uk/", cat: "Websites", services: ["Website Design"] },
-  { slug: "cambria-energy", name: "Cambria Energy", industry: "Energy — UK", url: "https://cambriaenergy.co.uk/", cat: "Websites", services: ["Website Design"] },
-  { slug: "waqar-e-madina", name: "Waqar-e-Madina", industry: "Religious / Community", url: "https://waqar-e-madina.vercel.app/", cat: "Websites", services: ["Website Design"] },
-  { slug: "aymarix", name: "Aymarix", industry: "Tech / SaaS", url: "https://aymarix.vercel.app/", cat: "Websites", services: ["Website Design"] },
-  { slug: "marching-bell-schools", name: "Marching Bell Schools", industry: "Education — LMS", url: "https://marching-bell-schoolss.vercel.app/login", cat: "Websites", services: ["Custom App"] },
-  { slug: "corpodit", name: "Corpodit", industry: "Corporate / SaaS", url: "https://corpodit-orpin.vercel.app/", cat: "Websites", services: ["Website Design"] },
-  { slug: "efe-retrofit-services", name: "EFE Retrofit Services", industry: "Home Retrofit — UK", url: "https://efretrofitservices.com/", cat: "Websites", services: ["Website Design"] },
-  { slug: "aklikx", name: "Aklikx", industry: "Tech / Agency", url: "https://aklikx.ca/", cat: "Websites", services: ["Website Design"] },
+  { slug: "ad-solution", name: "Ad Solution", industry: "Advertising , UK", url: "https://ad-solution.co.uk/", cat: "Websites", services: ["Website Design"] },
+  { slug: "cambria-energy", name: "Cambria Energy", industry: "Energy , UK", url: "https://cambriaenergy.co.uk/", cat: "Websites", services: ["Website Design"] },
+  
+  
 
   // Most recent flagship
-  { slug: "emergency-plumbing-ltd", name: "Emergency Plumbing Ltd", industry: "Emergency Plumbing — London", url: "https://www.emergencyplumbingltd.co.uk/", cat: "Websites", services: ["Website Design", "Google Ads", "SEO"] },
-  { slug: "marchbloom-law", name: "Marchbloom Law", industry: "Law Firm", url: "https://marchbloomlaw.com/", cat: "Websites", services: ["Website Design", "SEO"] },
-  { slug: "techonskills", name: "TechOnSkills", industry: "Education — LMS Platform", url: "https://techonskills.com/", cat: "Websites", services: ["Custom App", "Website Design"] },
+ 
 ];
 
 export const PORTFOLIO_SITES: PortfolioSite[] = rawPortfolioSites.map((s, i) => ({

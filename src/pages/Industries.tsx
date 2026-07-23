@@ -12,7 +12,7 @@ const Icon = ({ name, className }: { name: string; className?: string }) => {
 const Industries = () => (
   <>
     <Seo
-      title="Industries We Help — The SR Innovations"
+      title="Industries We Help , The SR Innovations"
       description="Marketing for plumbers, cleaners, automotive, coaches, law firms, medical clinics, massage and home services."
       path="/industries"
     />

@@ -10,11 +10,11 @@ const Icon = ({ name, className }: { name: string; className?: string }) => {
 
 const About = () => (
   <>
-    <Seo title="About — The SR Innovations | UK Digital Growth Agency" description="UK registered digital growth agency founded by Saqib Rasheed. Helping service businesses generate more leads with websites, SEO, Google Ads, social and branding." path="/about" />
+    <Seo title="About , The SR Innovations | UK Digital Growth Agency" description="UK registered digital growth agency founded by Saqib Rasheed. Helping service businesses generate more leads with websites, SEO, Google Ads, social and branding." path="/about" />
     <PageHero
       eyebrow="About us"
       title={<>A UK registered agency built on <span className="text-gradient">measurable growth.</span></>}
-      subtitle="We help service businesses generate more leads through websites, SEO, Google Ads, social media and branding — with honest reporting and a real partnership."
+      subtitle="We help service businesses generate more leads through websites, SEO, Google Ads, social media and branding , with honest reporting and a real partnership."
     />
 
     {/* Founder */}
@@ -39,7 +39,7 @@ const About = () => (
           <span className="eyebrow">About the founder</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold leading-tight">Founded by <span className="text-gradient">{FOUNDER.name}.</span></h2>
           <p className="text-muted-foreground text-lg">
-            The SR Innovations was founded by {FOUNDER.name}, a {FOUNDER.age} year old entrepreneur and the owner of {SITE.legalName} — a UK registered company built to help service businesses grow online.
+            The SR Innovations was founded by {FOUNDER.name}, a {FOUNDER.age} year old entrepreneur and the owner of {SITE.legalName} , a UK registered company built to help service businesses grow online.
           </p>
           <p className="text-muted-foreground">{FOUNDER.bio}</p>
           <div className="grid sm:grid-cols-2 gap-3 pt-2">
@@ -63,7 +63,7 @@ const About = () => (
         <div className="max-w-3xl mb-12">
           <span className="eyebrow">Our team</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 leading-tight">An experienced team behind <span className="text-gradient">every campaign.</span></h2>
-          <p className="text-muted-foreground mt-3 text-lg">Specialists across design, SEO, advertising and social media — all working under one accountable point of contact.</p>
+          <p className="text-muted-foreground mt-3 text-lg">Specialists across design, SEO, advertising and social media , all working under one accountable point of contact.</p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {[

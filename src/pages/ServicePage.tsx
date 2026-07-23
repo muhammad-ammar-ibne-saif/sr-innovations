@@ -12,7 +12,7 @@ const Icon = ({ name, className }: { name: string; className?: string }) => {
 
 const COPY: Record<ServiceKey, { problem: string; what: string[]; why: string[]; faq: { q: string; a: string }[] }> = {
   "website-design": {
-    problem: "Most service business websites look fine — but they don't convert. Slow load times, weak headlines and unclear calls to action mean visitors leave without enquiring.",
+    problem: "Most service business websites look fine , but they don't convert. Slow load times, weak headlines and unclear calls to action mean visitors leave without enquiring.",
     what: ["Conversion focused homepage and service pages", "Mobile first, fast loading code", "Clear lead capture and call buttons", "SEO ready foundations and analytics", "Copy that speaks to your ideal customer", "Trust building elements: reviews, badges, results"],
     why: ["Every section is built around one outcome: more enquiries.", "Premium UK agency design at a fair price.", "Honest tracking so you know exactly what's working."],
     faq: [
@@ -22,25 +22,25 @@ const COPY: Record<ServiceKey, { problem: string; what: string[]; why: string[];
     ],
   },
   "social-media-marketing": {
-    problem: "Posting without a plan burns time and budget. Most service businesses get likes — not customers.",
+    problem: "Posting without a plan burns time and budget. Most service businesses get likes , not customers.",
     what: ["Monthly content strategy and calendar", "Reels, posts and stories tailored to your audience", "Paid social campaigns on Meta and TikTok", "Community management and DMs", "Monthly performance reports", "Influencer and partnership outreach"],
     why: ["Content is built around customer questions, not vanity trends.", "Every campaign is tracked back to leads and revenue.", "Premium creative that makes you look bigger than you are."],
     faq: [
-      { q: "Which platforms do you cover?", a: "Instagram, TikTok, Facebook and LinkedIn — chosen based on where your customers actually are." },
+      { q: "Which platforms do you cover?", a: "Instagram, TikTok, Facebook and LinkedIn , chosen based on where your customers actually are." },
       { q: "Do you film content?", a: "Yes. We can arrange shoots or coach you to film high quality content yourself." },
     ],
   },
   "seo-services": {
-    problem: "If you're not on page 1 of Google, you're invisible to ready to buy customers. Most SEO agencies report on rankings — not on revenue.",
+    problem: "If you're not on page 1 of Google, you're invisible to ready to buy customers. Most SEO agencies report on rankings , not on revenue.",
     what: ["Technical SEO audit and fixes", "Local and national keyword strategy", "On page optimisation and content programme", "Authority link building", "Google Business Profile optimisation", "Monthly reporting tied to leads and revenue"],
-    why: ["Strategy first — no template work.", "Focus on commercial keywords that bring buyers.", "Transparent reporting every single month."],
+    why: ["Strategy first , no template work.", "Focus on commercial keywords that bring buyers.", "Transparent reporting every single month."],
     faq: [
       { q: "How long until I see results?", a: "Local SEO can show movement in 6 to 8 weeks. Competitive national SEO usually takes 3 to 6 months." },
       { q: "Do you guarantee rankings?", a: "Anyone who guarantees rankings is lying. We guarantee a real strategy and transparent reporting." },
     ],
   },
   "google-ads-management": {
-    problem: "Most Google Ads accounts waste 40 to 60 percent of budget on the wrong searches. Calls come in — but the quality is poor.",
+    problem: "Most Google Ads accounts waste 40 to 60 percent of budget on the wrong searches. Calls come in , but the quality is poor.",
     what: ["Account audit and rebuild", "Search, call and Performance Max campaigns", "Conversion focused landing pages", "Call and form tracking", "Weekly optimisation and bid management", "Transparent monthly reporting"],
     why: ["Phone calls and enquiries within the first 7 days.", "Negative keywords and audience controls cut wasted spend.", "Tracking that ties every lead back to revenue."],
     faq: [
@@ -49,7 +49,7 @@ const COPY: Record<ServiceKey, { problem: string; what: string[]; why: string[];
     ],
   },
   "branding-design": {
-    problem: "Looking small costs you money. Premium brands attract premium clients — and can charge significantly more.",
+    problem: "Looking small costs you money. Premium brands attract premium clients , and can charge significantly more.",
     what: ["Brand strategy and positioning", "Logo, identity and typography system", "Colour palette and brand guidelines", "Marketing collateral and templates", "Pitch decks and proposal templates", "Photography and visual direction"],
     why: ["Brand systems built to scale across every channel.", "Clear, premium identity that commands higher prices.", "Editable templates so your team stays on brand."],
     faq: [
@@ -98,7 +98,7 @@ const ServicePage = () => {
   return (
     <>
       <Seo
-        title={`${s.title} — The SR Innovations`}
+        title={`${s.title} , The SR Innovations`}
         description={`${s.short} UK registered digital growth agency.`}
         path={`/services/${s.key}`}
         schema={{

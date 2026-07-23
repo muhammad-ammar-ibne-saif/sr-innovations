@@ -38,7 +38,7 @@ export const ContactForm = ({ defaultService, compact }: Props) => {
       return;
     }
     setSubmitting(true);
-    const subject = encodeURIComponent(`Growth audit enquiry — ${values.service}`);
+    const subject = encodeURIComponent(`Growth audit enquiry , ${values.service}`);
     const body = encodeURIComponent(
       `Name: ${values.name}\nEmail: ${values.email}\nPhone: ${values.phone}\nService: ${values.service}\n\n${values.message}`
     );
@@ -54,7 +54,7 @@ export const ContactForm = ({ defaultService, compact }: Props) => {
     return (
       <div className="rounded-2xl border border-success/30 bg-success/5 p-6 text-center">
         <CheckCircle2 className="size-10 text-success mx-auto mb-3" />
-        <h3 className="font-display font-semibold text-lg">Thanks — your message is on its way.</h3>
+        <h3 className="font-display font-semibold text-lg">Thanks , your message is on its way.</h3>
         <p className="text-sm text-muted-foreground mt-1">If your email app didn't open, email us at <a className="underline" href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
       </div>
     );

@@ -146,7 +146,7 @@ const Portfolio = () => {
   return (
     <>
       <Seo
-        title="Portfolio — The SR Innovations"
+        title="Portfolio , The SR Innovations"
         description="Recent websites, SEO, Google Ads, social media and branding work from our UK digital growth agency."
         path="/portfolio"
       />

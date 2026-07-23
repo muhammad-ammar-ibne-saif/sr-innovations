@@ -18,7 +18,7 @@ export const SiteFooter = () => {
       <div className="absolute inset-0 grid-bg opacity-25 pointer-events-none" />
       <div className="container-wide relative py-16 md:pt-12 md:pb-3">
         <div className="grid gap-12 lg:grid-cols-12">
-          {/* Col 1 — Brand */}
+          {/* Col 1 , Brand */}
           <div className="lg:col-span-4 space-y-5">
             <Link to="/" className="flex items-center gap-3">
               <img src={Logo} alt="SR Innovations" className="h-11 w-11 md:h-32 md:w-72" />
@@ -48,7 +48,7 @@ export const SiteFooter = () => {
             </div>
           </div>
 
-          {/* Col 2 — Services */}
+          {/* Col 2 , Services */}
           <div className="lg:col-span-2">
             <div className="text-sm font-semibold text-white mb-4">Services</div>
             <ul className="space-y-2 text-sm text-white/70">
@@ -58,7 +58,7 @@ export const SiteFooter = () => {
             </ul>
           </div>
 
-          {/* Col 3 — Industries */}
+          {/* Col 3 , Industries */}
           <div className="lg:col-span-3">
             <div className="text-sm font-semibold text-white mb-4">Industries</div>
             <ul className="space-y-2 text-sm text-white/70">
@@ -74,7 +74,7 @@ export const SiteFooter = () => {
             </ul>
           </div>
 
-          {/* Col 4 — Contact */}
+          {/* Col 4 , Contact */}
           <div className="lg:col-span-3">
             <div className="text-sm font-semibold text-white mb-4">Contact</div>
             <ul className="space-y-3 text-sm text-white/75">

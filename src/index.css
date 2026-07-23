@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* SR Innovations — Premium Digital Growth Agency Design System
+/* SR Innovations , Premium Digital Growth Agency Design System
    All colors in HSL. Use semantic tokens only. */
 
 @layer base {
@@ -16,13 +16,13 @@
     --popover: 0 0% 100%;
     --popover-foreground: 230 35% 10%;
 
-    /* Brand — deep indigo / violet */
+    /* Brand , deep indigo / violet */
     --primary: 249 78% 60%;
     --primary-foreground: 0 0% 100%;
     --primary-glow: 258 90% 72%;
     --primary-deep: 244 70% 38%;
 
-    /* Premium accent — warm gold */
+    /* Premium accent , warm gold */
     --accent: 42 92% 58%;
     --accent-foreground: 230 35% 10%;
 

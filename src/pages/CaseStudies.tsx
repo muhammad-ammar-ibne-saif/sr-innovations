@@ -5,7 +5,7 @@ import * as Icons from "lucide-react";
 
 const CaseStudies = () => (
   <>
-    <Seo title="Case Studies — The SR Innovations" description="Real client growth stories from our UK digital growth agency: websites, SEO, Google Ads, social and branding." path="/case-studies" />
+    <Seo title="Case Studies , The SR Innovations" description="Real client growth stories from our UK digital growth agency: websites, SEO, Google Ads, social and branding." path="/case-studies" />
     <PageHero eyebrow="Case studies" title={<>Real UK clients. <span className="text-gradient">Real growth stories.</span></>} subtitle="A look at recent UK businesses we've helped across legal, automotive, aesthetics and home services." />
     <section className="py-16 md:py-20">
       <div className="container-wide space-y-8">

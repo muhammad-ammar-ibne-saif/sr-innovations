@@ -14,7 +14,7 @@ const written = [
 
 const Testimonials = () => (
   <>
-    <Seo title="Testimonials — The SR Innovations" description="Video and written testimonials from real UK service businesses we've helped grow." path="/testimonials" />
+    <Seo title="Testimonials , The SR Innovations" description="Video and written testimonials from real UK service businesses we've helped grow." path="/testimonials" />
     <PageHero eyebrow="Testimonials" title={<>Real words from <span className="text-gradient">real clients.</span></>} subtitle="Video and written reviews from UK service businesses we've worked with." />
 
     <section className="py-16 md:py-20">
@@ -45,7 +45,7 @@ const Testimonials = () => (
     {/* TODO: swap for your actual cover image import/path */}
     <img
       src={v.cover}
-      alt={`${v.name} — ${v.business}`}
+      alt={`${v.name} , ${v.business}`}
       className="absolute inset-0 size-full object-cover"
     />
     <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-primary-deep/30 to-transparent" />

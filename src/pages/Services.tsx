@@ -14,13 +14,13 @@ const Icon = ({ name, className }: { name: string; className?: string }) => {
 const Services = () => (
   <>
     <Seo
-      title="Services — The SR Innovations | UK Digital Growth Agency"
+      title="Services , The SR Innovations | UK Digital Growth Agency"
       description="Websites, SEO, Google Ads, social media and branding. Lead generation services for UK service businesses."
       path="/services"
     />
     <PageHero
       eyebrow="Services"
-      title={<>The full digital growth stack — <span className="text-gradient">under one roof.</span></>}
+      title={<>The full digital growth stack <span className="text-gradient">under one roof.</span></>}
       subtitle="From the first click to the booked job. Pick a single service or a complete growth retainer."
     />
     <section className="py-20 md:py-28">

@@ -23,7 +23,7 @@ const sharp = require("sharp");
 
 const sites = require("./sites.json");
 
-// Card aspect ratio is 4:3 — capture at 2x for retina sharpness, then downscale
+// Card aspect ratio is 4:3 , capture at 2x for retina sharpness, then downscale
 const VIEWPORT = { width: 1200, height: 900 };
 const OUT_RAW = path.join(__dirname, "output");
 const OUT_FINAL = path.join(__dirname, "output-cropped");
@@ -53,7 +53,7 @@ async function dismissCookieBanners(page) {
         await page.waitForTimeout(400);
       }
     } catch (_) {
-      // selector not present — ignore and continue
+      // selector not present , ignore and continue
     }
   }
 }
@@ -71,7 +71,7 @@ async function captureSite(browser, site) {
     console.log(`→ ${site.name} (${site.url})`);
 
     if (site.requiresAuth) {
-      console.log(`  ⚠ skipped — requires login, capture manually`);
+      console.log(`  ⚠ skipped , requires login, capture manually`);
       await context.close();
       return { slug: site.slug, status: "skipped-auth" };
     }
