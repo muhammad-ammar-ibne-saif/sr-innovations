@@ -109,9 +109,9 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="lg:col-span-5 relative">
+      <div className="lg:col-span-5 relative w-full overflow-hidden sm:overflow-visible px-2 sm:px-0">
         <div className="relative max-w-md mx-auto">
-          <div className="absolute -inset-6 rounded-[2rem] bg-gradient-primary blur-2xl opacity-20" />
+          <div className="absolute -inset-6 rounded-[2rem] bg-gradient-primary blur-2xl opacity-20 pointer-events-none" />
           <div className="relative rounded-[2rem] bg-white shadow-elegant p-6 space-y-4">
             <div className="flex items-center justify-between gap-3">
               <div className="min-w-0">
@@ -153,7 +153,7 @@ const Home = () => {
 </section>
 
       {/* 2. TRUST BAR */}
-<section className="border-y border-border bg-surface">
+<section className="hidden md:block border-y border-border bg-surface">
   <div className="container-wide py-6">
     <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
       {[

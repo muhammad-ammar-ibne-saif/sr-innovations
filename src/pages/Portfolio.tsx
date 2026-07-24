@@ -14,6 +14,30 @@ type Item = {
   url?: string;
   screenshot?: string;
   initials: string;
+  platform?: string;
+};
+
+// Icon shown inside each service pill
+const SERVICE_ICONS: Record<string, keyof typeof Icons> = {
+  "Website Design": "Monitor",
+  "Custom App": "Code2",
+  "Google Ads": "Target",
+  SEO: "Search",
+  "Social Media": "Share2",
+  Branding: "Sparkles",
+};
+
+// Icon + color for the platform badge (WordPress / Wix / Custom Code)
+const PLATFORM_ICONS: Record<string, keyof typeof Icons> = {
+  WordPress: "Feather",
+  Wix: "LayoutGrid",
+  "Custom Code": "Terminal",
+};
+
+const PLATFORM_STYLES: Record<string, string> = {
+  WordPress: "bg-blue-600/90",
+  Wix: "bg-amber-500/90",
+  "Custom Code": "bg-emerald-600/90",
 };
 
 const items: Item[] = [...PORTFOLIO_SITES, ...SOCIAL_MEDIA_SITES].map((p) => ({
@@ -25,6 +49,7 @@ const items: Item[] = [...PORTFOLIO_SITES, ...SOCIAL_MEDIA_SITES].map((p) => ({
   services: p.services,
   url: p.url,
   screenshot: p.screenshot,
+  platform: (p as any).platform,
   initials: p.name
     .replace(/[^A-Za-z ]/g, "")
     .split(" ")
@@ -34,7 +59,18 @@ const items: Item[] = [...PORTFOLIO_SITES, ...SOCIAL_MEDIA_SITES].map((p) => ({
     .toUpperCase(),
 }));
 
-const cats = ["All", "Websites", "Social Media", "SEO", "Google Ads", "Branding"];
+const cats = ["All", "Websites", "Social Media"];
+
+const ServicePill = ({ service }: { service: string }) => {
+  const IconName = SERVICE_ICONS[service];
+  const Icon = IconName ? (Icons[IconName] as any) : null;
+  return (
+    <span className="inline-flex items-center gap-1 text-[11px] font-medium rounded-full bg-primary/10 text-primary px-2.5 py-1">
+      {Icon && <Icon className="size-3" />}
+      {service}
+    </span>
+  );
+};
 
 const PreviewCard = ({ p }: { p: Item }) => {
   const domain = (p.url ?? `${p.name.toLowerCase().replace(/[^a-z0-9]+/g, "")}.co.uk`)
@@ -47,33 +83,31 @@ const PreviewCard = ({ p }: { p: Item }) => {
   return (
     <Wrapper {...wrapperProps} className="group rounded-3xl overflow-hidden border border-border bg-card hover-lift animate-fade-in block">
       {/* Browser chrome */}
-     {!isSocial && (
-  <div className="bg-foreground/5 border-b border-border px-3 py-2 flex items-center gap-2">
-    <span className="size-2.5 rounded-full bg-red-400" />
-    <span className="size-2.5 rounded-full bg-amber-400" />
-    <span className="size-2.5 rounded-full bg-emerald-400" />
-    <div className="ml-2 flex-1 rounded-md bg-background border border-border px-2 py-0.5 text-[10px] text-muted-foreground truncate">
-      {domain}
-    </div>
-  </div>
-)}
+      {!isSocial && (
+        <div className="bg-foreground/5 border-b border-border px-3 py-2 flex items-center gap-2">
+          <span className="size-2.5 rounded-full bg-red-400" />
+          <span className="size-2.5 rounded-full bg-amber-400" />
+          <span className="size-2.5 rounded-full bg-emerald-400" />
+          <div className="ml-2 flex-1 rounded-md bg-background border border-border px-2 py-0.5 text-[10px] text-muted-foreground truncate">
+            {domain}
+          </div>
+        </div>
+      )}
 
       <div className={`aspect-[4/3] relative overflow-hidden ${p.screenshot ? "bg-muted" : `bg-gradient-to-br ${p.color}`}`}>
         {p.screenshot ? (
           <>
             <img
               src={p.screenshot}
-              alt={`${p.name} website preview`}
+              alt={`${p.name} preview`}
               className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
               onError={(e) => {
-                // Fallback to gradient+initials if the screenshot file is missing
                 (e.currentTarget as HTMLImageElement).style.display = "none";
                 const fallback = e.currentTarget.nextElementSibling as HTMLElement | null;
                 if (fallback) fallback.style.display = "flex";
               }}
             />
-            {/* Bottom gradient for text legibility over any screenshot */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent pointer-events-none" />
           </>
         ) : (
@@ -103,11 +137,27 @@ const PreviewCard = ({ p }: { p: Item }) => {
         <div className="absolute top-3 left-3 text-[10px] font-bold tracking-wider uppercase bg-white/95 text-foreground rounded-full px-2.5 py-1">
           {p.cat}
         </div>
-        {!isSocial && (
-  <div className="absolute top-3 right-3 text-[10px] font-bold tracking-wider uppercase bg-black/40 backdrop-blur text-white border border-white/20 rounded-full px-2.5 py-1">
-    {p.screenshot ? "Live Site" : "Project Preview"}
-  </div>
-)}
+
+        <div className="absolute top-3 right-3 flex items-center gap-1.5">
+          {!isSocial && p.platform && (
+            <span
+              className={`inline-flex items-center gap-1 text-[10px] font-bold tracking-wider uppercase ${
+                PLATFORM_STYLES[p.platform] ?? "bg-black/40"
+              } backdrop-blur text-white border border-white/20 rounded-full px-2.5 py-1`}
+            >
+              {(() => {
+                const PlatformIcon = Icons[PLATFORM_ICONS[p.platform] ?? "Globe"] as any;
+                return PlatformIcon ? <PlatformIcon className="size-3" /> : null;
+              })()}
+              {p.platform}
+            </span>
+          )}
+          {!isSocial && (
+            <span className="text-[10px] font-bold tracking-wider uppercase bg-black/40 backdrop-blur text-white border border-white/20 rounded-full px-2.5 py-1">
+              {p.screenshot ? "Live Site" : "Project Preview"}
+            </span>
+          )}
+        </div>
 
         <div className="absolute bottom-3 left-4 right-4 text-white">
           <div className="font-display font-bold text-lg leading-tight">{p.name}</div>
@@ -122,17 +172,15 @@ const PreviewCard = ({ p }: { p: Item }) => {
         <div className="flex flex-wrap items-center justify-between gap-2">
           <div className="flex flex-wrap gap-1.5">
             {p.services.map((s) => (
-              <span key={s} className="text-[11px] font-medium rounded-full bg-primary/10 text-primary px-2.5 py-1">
-                {s}
-              </span>
+              <ServicePill key={s} service={s} />
             ))}
           </div>
           {p.url && (
-  <span className="inline-flex items-center gap-1 text-xs font-semibold text-primary">
-    {isSocial ? "Visit page" : "Visit site"}
-    <Icons.ArrowUpRight className="size-3.5" />
-  </span>
-)}
+            <span className="inline-flex items-center gap-1 text-xs font-semibold text-primary">
+              {isSocial ? "Visit page" : "Visit site"}
+              <Icons.ArrowUpRight className="size-3.5" />
+            </span>
+          )}
         </div>
       </div>
     </Wrapper>
@@ -146,7 +194,7 @@ const Portfolio = () => {
   return (
     <>
       <Seo
-        title="Portfolio , The SR Innovations"
+        title="Portfolio — The SR Innovations"
         description="Recent websites, SEO, Google Ads, social media and branding work from our UK digital growth agency."
         path="/portfolio"
       />

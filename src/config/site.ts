@@ -211,14 +211,14 @@ const rawPortfolioSites: Omit<PortfolioSite, "color" | "screenshot"> & { slug: s
   { slug: "waqar-e-madina", name: "Waqar-e-Madina", industry: "Religious / Community", url: "https://waqar-e-madina.vercel.app/", cat: "Websites", services: ["Website Design"] },
   { slug: "aymarix", name: "Aymarix", industry: "Tech / SaaS", url: "https://aymarix.vercel.app/", cat: "Websites", services: ["Website Design"] },
   { slug: "aklikx", name: "Aklikx", industry: "Tech / Agency", url: "https://aklikx.ca/", cat: "Websites", services: ["Website Design"] },
-  { slug: "welkin-accounting", name: "Welkin Accounting", industry: "Accounting , Canada", url: "https://welkinaccounting.ca/", cat: "Websites", services: ["Website Design"] },
+  // { slug: "welkin-accounting", name: "Welkin Accounting", industry: "Accounting , Canada", url: "https://welkinaccounting.ca/", cat: "Websites", services: ["Website Design"] },
 
   { slug: "cj-rose-plumbing", name: "CJ Rose Plumbing", industry: "Plumbing", url: "https://www.cjroseplumbing.com/", cat: "Websites", services: ["Website Design"] },
 
   // Custom Code
-  { slug: "inventory-management-system", name: "Inventory Management System", industry: "Custom SaaS", url: "https://inventory-management-system-rouge-five.vercel.app/", cat: "Websites", services: ["Custom App"] },
-  { slug: "ad-solution", name: "Ad Solution", industry: "Advertising , UK", url: "https://ad-solution.co.uk/", cat: "Websites", services: ["Website Design"] },
-  { slug: "cambria-energy", name: "Cambria Energy", industry: "Energy , UK", url: "https://cambriaenergy.co.uk/", cat: "Websites", services: ["Website Design"] },
+  // { slug: "inventory-management-system", name: "Inventory Management System", industry: "Custom SaaS", url: "https://inventory-management-system-rouge-five.vercel.app/", cat: "Websites", services: ["Custom App"] },
+  // { slug: "ad-solution", name: "Ad Solution", industry: "Advertising , UK", url: "https://ad-solution.co.uk/", cat: "Websites", services: ["Website Design"] },
+  // { slug: "cambria-energy", name: "Cambria Energy", industry: "Energy , UK", url: "https://cambriaenergy.co.uk/", cat: "Websites", services: ["Website Design"] },
   
   
 
@@ -236,12 +236,15 @@ export const PORTFOLIO_SITES: PortfolioSite[] = rawPortfolioSites.map((s, i) => 
 // ---- Add this below PORTFOLIO_SITES in site.ts ----
 
 const rawSocialSites = [
-  { slug: "social-client-1", name: "Social Client 1", industry: "Add industry", url: "fhjfn", services: ["Social Media"] },
-  { slug: "social-client-2", name: "Social Client 2", industry: "Add industry", url: "", services: ["Social Media"] },
-  { slug: "social-client-3", name: "Social Client 3", industry: "Add industry", url: "", services: ["Social Media"] },
-  { slug: "social-client-4", name: "Social Client 4", industry: "Add industry", url: "", services: ["Social Media"] },
-  { slug: "social-client-5", name: "Social Client 5", industry: "Add industry", url: "", services: ["Social Media"] },
-  { slug: "social-client-6", name: "Social Client 6", industry: "Add industry", url: "", services: ["Social Media"] },
+  { slug: "social-client-1", name: "Social Client 1", industry: "Add industry", url: "https://www.facebook.com/profile.php?id=61559647870143", services: ["Social Media"] },
+  { slug: "social-client-2", name: "Social Client 2", industry: "Add industry", url: "https://www.instagram.com/biginkbash/", services: ["Social Media"] },
+  { slug: "social-client-3", name: "Social Client 3", industry: "Add industry", url: "https://www.instagram.com/charityboots/", services: ["Social Media"] },
+  { slug: "social-client-4", name: "Social Client 4", industry: "Add industry", url: "https://www.facebook.com/AlexMaggsPlumbing", services: ["Social Media"] },
+  { slug: "social-client-5", name: "Social Client 5", industry: "Add industry", url: "https://www.instagram.com/aureslondon/?hl=en", services: ["Social Media"] },
+  { slug: "social-client-6", name: "Social Client 6", industry: "Add industry", url: "https://www.instagram.com/blackburnutdfc/", services: ["Social Media"] },
+  { slug: "social-client-7", name: "Social Client 7", industry: "Add industry", url: "https://www.instagram.com/bloodalchemy2025/", services: ["Social Media"] },
+  { slug: "social-client-8", name: "Social Client 8", industry: "Add industry", url: "https://www.instagram.com/cambriaenergygroup/", services: ["Social Media"] },
+  { slug: "social-client-9", name: "Social Client 9", industry: "Add industry", url: "https://www.instagram.com/cb_precisionperformance/", services: ["Social Media"] },
 ];
 
 export const SOCIAL_MEDIA_SITES: PortfolioSite[] = rawSocialSites.map((s, i) => ({

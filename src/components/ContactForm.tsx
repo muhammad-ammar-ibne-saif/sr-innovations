@@ -63,21 +63,21 @@ export const ContactForm = ({ defaultService, compact }: Props) => {
   return (
     <form onSubmit={onSubmit} className={compact ? "space-y-4" : "space-y-5"} noValidate>
       <div className="grid sm:grid-cols-2 gap-4">
-        <div className="space-y-1.5">
+        <div className="space-y-1.5 min-w-0">
           <Label htmlFor="name">Full name</Label>
           <Input id="name" value={values.name} onChange={(e) => set("name")(e.target.value)} placeholder="Jane Smith" required maxLength={80} />
         </div>
-        <div className="space-y-1.5">
+        <div className="space-y-1.5 min-w-0">
           <Label htmlFor="email">Email address</Label>
           <Input id="email" type="email" value={values.email} onChange={(e) => set("email")(e.target.value)} placeholder="you@company.com" required maxLength={160} />
         </div>
       </div>
       <div className="grid sm:grid-cols-2 gap-4">
-        <div className="space-y-1.5">
+        <div className="space-y-1.5 min-w-0">
           <Label htmlFor="phone">Phone number</Label>
           <Input id="phone" type="tel" value={values.phone} onChange={(e) => set("phone")(e.target.value)} placeholder="+44 7000 000 000" required maxLength={30} />
         </div>
-        <div className="space-y-1.5">
+        <div className="space-y-1.5 min-w-0">
           <Label htmlFor="service">Service</Label>
           <Select value={values.service} onValueChange={(v) => set("service")(v)}>
             <SelectTrigger id="service"><SelectValue placeholder="Choose a service" /></SelectTrigger>
@@ -88,7 +88,7 @@ export const ContactForm = ({ defaultService, compact }: Props) => {
           </Select>
         </div>
       </div>
-      <div className="space-y-1.5">
+      <div className="space-y-1.5 min-w-0">
         <Label htmlFor="message">How can we help?</Label>
         <Textarea id="message" rows={5} value={values.message} onChange={(e) => set("message")(e.target.value)} placeholder="Tell us about your business and goals…" required maxLength={1500} />
       </div>
