@@ -60,17 +60,21 @@ export const AuditForm = ({ defaultService, compact }: Props) => {
       return;
     }
     setSubmitting(true);
-    const subject = encodeURIComponent(`Growth audit request , ${values.service}`);
-    const body = encodeURIComponent(
-      `Name: ${values.name}\nEmail: ${values.email}\nPhone: ${values.phone}\nService: ${values.service}\nWebsite: ${values.website || "N/A"}\nBudget: ${values.budget}\nBiggest challenge: ${values.challenge}\n\n${values.message}`
-    );
-    setTimeout(() => {
-      window.location.href = `mailto:${SITE.email}?subject=${subject}&body=${body}`;
-      setSent(true);
-      setSubmitting(false);
-      toast({ title: "Opening your email app", description: "We'll review your details and reply within one working day." });
-    }, 300);
-  };
+try {
+  const res = await fetch("http://localhost:4000/api/audit", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(values),
+  });
+  if (!res.ok) throw new Error("Send failed");
+  setSent(true);
+  toast({ title: "Message sent", description: "We'll review your details and reply within one working day." });
+} catch {
+  toast({ title: "Something went wrong", description: "Please try again or WhatsApp us.", variant: "destructive" });
+} finally {
+  setSubmitting(false);
+}
+}
 
   if (sent) {
     return (
